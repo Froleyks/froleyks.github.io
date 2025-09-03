@@ -2,96 +2,127 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Nils Froleyks
+    - name: Institution
+      value: Johannes Kepler University Linz, Austria
+    - name: Email
+      value: nfroleyks@gmail.com
+    - name: Phone
+      value: +43 670 7034204
+    - name: Links
+      value: Google Scholar, GitHub
     - name: Languages
-      value: English, German
+      value: German (native), English (fluent)
+
+- title: Research Interests
+  type: list
+  contents:
+    - Model Checking
+    - Formal Verification
+    - Planning
+    - SAT Solving
+    - Optimization
+    - Leveraging AI and formal methods for trusted automated reasoning
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: PhD in Computer Science
+      institution: Johannes Kepler University Linz, Austria
+      year: 2020 – 2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Thesis: Deep Integration of SAT Solving and Model Checking
+        - Supervisors: Prof. Armin Biere, Prof. Martina Seidl
+    - title: MSc in Computer Science
+      institution: Karlsruhe Institute of Technology, Germany
+      year: 2018 – 2020
       description:
-        - Description 1.
-        - Description 2.
+        - Thesis: PASAR – Planning as Satisfiability with Abstraction Refinement
+        - Supervisors: Prof. Peter Sanders, Dr. Tomáš Balyo, Dr. Dominik Schreiber
+        - Award: Best Thesis Award
+    - title: BSc in Computer Science
+      institution: Karlsruhe Institute of Technology, Germany
+      year: 2013 – 2017
+      description:
+        - Thesis: Using an Algorithm Portfolio to Solve Sokoban
+        - Supervisors: Prof. Peter Sanders, Dr. Tomáš Balyo
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+    - title: Postdoctoral Researcher
+      institution: KU Leuven, Belgium
+      year: Oct 2025 – Present
+    - title: University Assistant
+      institution: Johannes Kepler University Linz, Austria
+      year: 2020 – 2025
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Career Breaks
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Paternity Leave
+      year: Feb – Nov 2022
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2025
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - CAV Distinguished Paper Award
+    - year: 2022
       items:
-        - Max Planck Medal
+        - Third Place, Combinatorial Reconfiguration Challenge
+    - year: 2020
+      items:
+        - Best Master’s Thesis Award, KIT
+    - year: 2019
+      items:
+        - First Prize (Partial Gold Medal), Sparkle Planning Challenge, ICAPS
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: Scientific Event Organization
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - Organizer, Hardware Model Checking Competition (HWMCC) 2025 – FMCAD, USA
+    - Organizer, Hardware Model Checking Competition (HWMCC) 2024 – FMCAD, Prague
+    - Organizer, SAT Competition 2021 – Barcelona
+    - Organizer, Hardware Model Checking Competition (HWMCC) 2020 – Virtual
+    - Organizer, SAT Competition 2020 – Alghero, Italy
+
+- title: International Collaboration
+  type: list
+  contents:
+    - Intel Corporation (since 2023): Certification for hardware model checking, monthly meetings and workshops
+    - Research Visit (2024): RWTH Aachen University with Prof. Joost-Pieter Katoen, model checking for probabilistic systems
+    - Woodpecker Technologies, Singapore (2022–2023): Pre-silicon verification with symbolic formal methods
+
+- title: Teaching & Supervision
+  type: list
+  contents:
+    - Lecturer in Model Checking (Winter 2024), JKU Linz
+    - Lecturer in Debugging (Summer 2024), JKU Linz
+    - Supervised Bachelor’s Thesis (2024), JKU Linz – Ternary simulation for IC3
+    - Teaching Assistant (2020–2024), JKU Linz – Model Checking, Formal Models, Logic, SAT Solving, AI
+    - Teaching Assistant (2018), KIT – Algorithms for Planar Graphs
+    - Teaching Assistant (2015–2019), KIT – Theoretical Foundations of Informatics
+
+- title: Skills
+  type: map
+  contents:
+    - name: Programming Languages
+      value: C++, Python
+    - name: Languages
+      value: German (native), English (fluent)
+
+- title: Tools & Open Source Projects
+  type: time_table
+  contents:
+    - title: Certifaiger
+      year: 2023-now
+      description: Certificate checker for hardware model checking certificates
+    - title: Voiraig
+      description: A certifying model checker
+    - title: Cerbotor
+      description: Word-level certificate checker for hardware model checking
+    - title: CaDiCaL
+      description: Award-winning state-of-the-art SAT solver
+
