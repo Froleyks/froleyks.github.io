@@ -3,65 +3,56 @@
   contents:
     - name: Full Name
       value: Nils Froleyks
+    - name: Date of Birth
+      value: 16th March 1995
     - name: Institution
-      value: Johannes Kepler University Linz, Austria
+      value: KU Leuven, Belgium
     - name: Email
       value: nfroleyks@gmail.com
     - name: Phone
       value: +43 670 7034204
-    - name: Links
-      value: Google Scholar, GitHub
     - name: Languages
-      value: German (native), English (fluent)
-
-- title: Research Interests
-  type: list
-  contents:
-    - Model Checking
-    - Formal Verification
-    - Planning
-    - SAT Solving
-    - Optimization
-    - Leveraging AI and formal methods for trusted automated reasoning
-
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD in Computer Science
-      institution: Johannes Kepler University Linz, Austria
-      year: 2020 – 2025
-      description:
-        - Thesis: Deep Integration of SAT Solving and Model Checking
-        - Supervisors: Prof. Armin Biere, Prof. Martina Seidl
-    - title: MSc in Computer Science
-      institution: Karlsruhe Institute of Technology, Germany
-      year: 2018 – 2020
-      description:
-        - Thesis: PASAR – Planning as Satisfiability with Abstraction Refinement
-        - Supervisors: Prof. Peter Sanders, Dr. Tomáš Balyo, Dr. Dominik Schreiber
-        - Award: Best Thesis Award
-    - title: BSc in Computer Science
-      institution: Karlsruhe Institute of Technology, Germany
-      year: 2013 – 2017
-      description:
-        - Thesis: Using an Algorithm Portfolio to Solve Sokoban
-        - Supervisors: Prof. Peter Sanders, Dr. Tomáš Balyo
+      value: English, German
 
 - title: Experience
   type: time_table
   contents:
     - title: Postdoctoral Researcher
-      institution: KU Leuven, Belgium
-      year: Oct 2025 – Present
+      institution: Prof. Bogaerts — KU Leuven, Belgium
+      year: 2025 –
     - title: University Assistant
-      institution: Johannes Kepler University Linz, Austria
+      institution: Prof. Biere — Johannes Kepler University Linz, Austria
       year: 2020 – 2025
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD in Computer Science
+      maindescription: Deep Integration of SAT Solving and Model Checking
+      institution: Johannes Kepler University Linz, Austria
+      year: 2025
+      description:
+        - Prof. Armin Biere, Prof. Martina Seidl
+    - title: MSc in Computer Science
+      maindescription: PASAR – Planning as Satisfiability with Abstraction Refinement
+      institution: Karlsruhe Institute of Technology, Germany
+      year: 2020
+      description:
+        - Prof. Peter Sanders, Dr. Tomáš Balyo, Dr. Dominik Schreiber
+        - Best Thesis Award 🏆
+    - title: BSc in Computer Science
+      maindescription: Using an Algorithm Portfolio to Solve Sokoban
+      institution: Karlsruhe Institute of Technology, Germany
+      year: 2017
+      description:
+        - Prof. Peter Sanders, Dr. Tomáš Balyo
 
 - title: Career Breaks
   type: time_table
   contents:
-    - title: Paternity Leave
-      year: Feb – Nov 2022
+    - year: 2022
+      items:
+        - Paternity Leave (Feb – Nov)
 
 - title: Honors and Awards
   type: time_table
@@ -80,49 +71,36 @@
         - First Prize (Partial Gold Medal), Sparkle Planning Challenge, ICAPS
 
 - title: Scientific Event Organization
-  type: list
-  contents:
-    - Organizer, Hardware Model Checking Competition (HWMCC) 2025 – FMCAD, USA
-    - Organizer, Hardware Model Checking Competition (HWMCC) 2024 – FMCAD, Prague
-    - Organizer, SAT Competition 2021 – Barcelona
-    - Organizer, Hardware Model Checking Competition (HWMCC) 2020 – Virtual
-    - Organizer, SAT Competition 2020 – Alghero, Italy
-
-- title: International Collaboration
-  type: list
-  contents:
-    - Intel Corporation (since 2023): Certification for hardware model checking, monthly meetings and workshops
-    - Research Visit (2024): RWTH Aachen University with Prof. Joost-Pieter Katoen, model checking for probabilistic systems
-    - Woodpecker Technologies, Singapore (2022–2023): Pre-silicon verification with symbolic formal methods
-
-- title: Teaching & Supervision
-  type: list
-  contents:
-    - Lecturer in Model Checking (Winter 2024), JKU Linz
-    - Lecturer in Debugging (Summer 2024), JKU Linz
-    - Supervised Bachelor’s Thesis (2024), JKU Linz – Ternary simulation for IC3
-    - Teaching Assistant (2020–2024), JKU Linz – Model Checking, Formal Models, Logic, SAT Solving, AI
-    - Teaching Assistant (2018), KIT – Algorithms for Planar Graphs
-    - Teaching Assistant (2015–2019), KIT – Theoretical Foundations of Informatics
-
-- title: Skills
-  type: map
-  contents:
-    - name: Programming Languages
-      value: C++, Python
-    - name: Languages
-      value: German (native), English (fluent)
-
-- title: Tools & Open Source Projects
   type: time_table
   contents:
-    - title: Certifaiger
-      year: 2023-now
-      description: Certificate checker for hardware model checking certificates
-    - title: Voiraig
-      description: A certifying model checker
-    - title: Cerbotor
-      description: Word-level certificate checker for hardware model checking
-    - title: CaDiCaL
-      description: Award-winning state-of-the-art SAT solver
+    - year: 2025
+      items:
+        - Organizer, Hardware Model Checking Competition – FMCAD, USA
+    - year: 2024
+      items:
+        - Organizer, Hardware Model Checking Competition – FMCAD, Prague
+    - year: 2021
+      items:
+        - Organizer, SAT Competition – Barcelona
+    - year: 2020
+      items:
+        - Organizer, Hardware Model Checking Competition – Virtual
+        - Organizer, SAT Competition – Alghero, Italy
 
+- title: Teaching & Supervision
+  type: time_table
+  contents:
+    - year: 2024
+      items:
+        - Lecturer in Model Checking (Winter), JKU Linz
+        - Lecturer in Debugging (Summer), JKU Linz
+        - Supervised Bachelor’s Thesis – Ternary simulation for IC3, JKU Linz
+    - year: 2020–2024
+      items:
+        - Teaching Assistant – Model Checking, Formal Models, Logic, SAT Solving, AI, JKU Linz
+    - year: 2018
+      items:
+        - Teaching Assistant – Algorithms for Planar Graphs, KIT
+    - year: 2015–2019
+      items:
+        - Teaching Assistant – Theoretical Foundations of Informatics, KIT
