@@ -1,16 +1,36 @@
 ---
 ---
+@InProceedings{10.1007/978-3-031-98668-0_14,
+doi = {10.1007/978-3-031-98668-0_14},
+author="Froleyks, Nils
+and Yu, Emily
+and Preiner, Mathias
+and Biere, Armin
+and Heljanko, Keijo",
+editor="Piskac, Ruzica
+and Rakamari{\'{c}}, Zvonimir",
+title="Introducing Certificates to the Hardware Model Checking Competition",
+booktitle="Computer Aided Verification",
+year="2025",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="281--295",
+abstract="Certification was made mandatory for the first time in the latest hardware model checking competition. In this case study, we investigate the trade-offs of requiring certificates for both passing and failing properties in the competition. Our evaluation shows that participating model checkers were able to produce compact, correct certificates that could be verified with minimal overhead. Furthermore, the certifying winner of the competition outperforms the previous non-certifying state-of-the-art model checker, demonstrating that certification can be adopted without compromising model checking efficiency.",
+isbn="978-3-031-98668-0",
+selected={true}
+}
 
-@inproceedings{DBLP:conf/cav/BiereFFFFP24,
-  title        = {CaDiCaL 2.0},
-  author       = {Armin Biere and Tobias Faller and Katalin Fazekas and Mathias Fleury and Nils Froleyks and Florian Pollitt},
-  year         = {2024},
-  booktitle    = {{CAV} {(1)}},
-  publisher    = {Springer},
-  series       = {Lecture Notes in Computer Science},
-  volume       = {14681},
-  pages        = {133--152},
-  keywords     = {pub}
+@article{DBLP:journals/ai/FroleyksHIJS21,
+  title        = {{SAT} Competition 2020},
+  author       = {Nils Froleyks and Marijn Heule and Markus Iser and Matti J{\"{a}}rvisalo and Martin Suda},
+  year         = {2021},
+  journal      = {Artif. Intell.},
+  volume       = {301},
+  pages        = {103572},
+  doi          = {10.1016/j.artint.2021.103572},
+  keywords     = {pub},
+  abstract     = {The SAT Competitions constitute a well-established series of yearly open international algorithm implementation competitions, focusing on the Boolean satisfiability (or propositional satisfiability, SAT) problem. In this article, we provide a detailed account on the 2020 instantiation of the SAT Competition, including the new competition tracks and benchmark selection procedures, overview of solving strategies implemented in top-performing solvers, and a detailed analysis of the empirical data obtained from running the competition.}
+  selected     = {true}
 }
 
 @inproceedings{DBLP:conf/fmcad/FroleyksB21,
@@ -21,6 +41,64 @@
   publisher    = {{IEEE}},
   pages        = {72--76},
   doi          = {10.34727/2021/isbn.978-3-85448-046-4_15},
+  keywords     = {pub},
+  abstract     = "We extend the well-established assumption-based interface of incremental SAT solvers to clauses, allowing the addition of a temporary clause that has the same lifespan as literal assumptions. Our approach is efficient and easy to implement in modern CDCL-based solvers. Compared to previous approaches, it does not come with any memory overhead and does not slow down the solver due to disabled activation literals, thus eliminating the need for algorithms like IC3 to restart the SAT solver. All clauses learned under literal and clause assumptions are safe to keep and not implicitly invalidated for containing an activation literal. These changes increase the quality of learned clauses, resulting in better generalization for IC3. We implement the extension in the SAT solver CaDiCaL and evaluate it with the IC3 implementation in the model checker ABC. Our experiments on the benchmarks from a recent hardware model checking competition show a speedup for the average SAT call and a reduction in number of calls per verification instance, resulting in a substantial improvement in model checking time.",
+  selected={true}
+}
+
+@inproceedings{DBLP:conf/cav/BiereFFFFP24,
+  title        = {CaDiCaL 2.0},
+  author       = {Armin Biere and Tobias Faller and Katalin Fazekas and Mathias Fleury and Nils Froleyks and Florian Pollitt},
+  year         = {2024},
+  booktitle    = {{CAV} {(1)}},
+  publisher    = {Springer},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {14681},
+  pages        = {133--152},
+  keywords     = {pub},
+  abstract     = "The SAT solver CaDiCaL provides a rich feature set with a clean library interface. It has been adopted by many users, is well documented and easy to extend due to its effective testing and debugging infrastructure. In this tool paper we give a high-level introduction into the solver architecture and then go briefly over implemented techniques. We describe basic features and novel advanced usage scenarios. Experiments confirm that CaDiCaL despite this flexibility has state-of-the-art performance both in a stand-alone as well as incremental setting.",
+  doi          = {10.1007/978-3-031-65627-9_7,},
+  selected={true}
+}
+
+@inproceedings{DBLP:conf/ijcar/FroleyksYBH24,
+  title        = {Certifying Phase Abstraction},
+  author       = {Nils Froleyks and Yu, Emily and Biere, Armin and Heljanko, Keijo},
+  year         = {2024},
+  booktitle    = {Automated Reasoning - 12th International Joint Conference, {{IJCAR}} 2024, Nancy, France, July 3-6, 2024, Proceedings, Part {{I}}},
+  publisher    = {Springer},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {14739},
+  pages        = {284--303},
+  doi          = {10.1007/978-3-031-63498-7_17},
+  editor       = {Benzm{\"u}ller, Christoph and Heule, Marijn J. H. and Schmidt, Renate A.},
+  keywords     = {pub}
+}
+
+@inproceedings{DBLP:conf/socs/FroleyksBS19,
+  title = {{{PASAR}} - Planning as Satisfiability with Abstraction Refinement},
+  booktitle = {Proceedings of the Twelfth International Symposium on Combinatorial Search, {{SOCS}} 2019, Napa, California, 16-17 July 2019},
+  author = {Nils Froleyks and Balyo, Tom{\'a}{\v{s}} and Schreiber, Dominik},
+  editor = {Surynek, Pavel and Yeoh, William},
+  year = {2019},
+  pages = {70--78},
+  publisher = {AAAI Press},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  timestamp = {Wed, 07 Dec 2022 23:11:31 +0100},
+  keywords     = {pub}
+}
+
+@inproceedings{DBLP:conf/sat/BiereFFH23,
+  title        = {The {SAT} Museum},
+  author       = {Armin Biere and Mathias Fleury and Nils Froleyks and Marijn J. H. Heule},
+  year         = {2023},
+  booktitle    = {Proceedings of the 14th International Workshop on Pragmatics of {SAT} co-located with the 26th International Conference on Theory and Applications of Satisfiability Testing {(SAT} 2023), Alghero, Italy, July 4, 2023},
+  publisher    = {CEUR-WS.org},
+  series       = {{CEUR} Workshop Proceedings},
+  volume       = {3545},
+  pages        = {72--87},
+  url          = {https://ceur-ws.org/Vol-3545/paper6.pdf},
+  editor       = {Matti J{\"{a}}rvisalo and Daniel Le Berre},
   keywords     = {pub}
 }
 
@@ -43,48 +121,6 @@
   booktitle    = {{FMCAD}},
   publisher    = {{IEEE}},
   pages        = {162--167},
-  keywords     = {pub}
-}
-
-@inproceedings{froleyks2024ternary,
-  title        = {Ternary Simulation as Abstract Interpretation (Work in Progress)},
-  author       = {Nils Froleyks and Yu, Emily and Biere, Armin},
-  year         = {2024},
-  booktitle    = {MBMV 2024; 27. Workshop},
-  pages        = {148--151},
-  organization = {VDE},
-  keywords     = {pub}
-}
-
-@inproceedings{DBLP:conf/ijcar/FroleyksYBH24,
-  title        = {Certifying Phase Abstraction},
-  author       = {Nils Froleyks and Yu, Emily and Biere, Armin and Heljanko, Keijo},
-  year         = {2024},
-  booktitle    = {Automated Reasoning - 12th International Joint Conference, {{IJCAR}} 2024, Nancy, France, July 3-6, 2024, Proceedings, Part {{I}}},
-  publisher    = {Springer},
-  series       = {Lecture Notes in Computer Science},
-  volume       = {14739},
-  pages        = {284--303},
-  doi          = {10.1007/978-3-031-63498-7_17},
-  editor       = {Benzm{\"u}ller, Christoph and Heule, Marijn J. H. and Schmidt, Renate A.},
-  keywords     = {pub}
-}
-
-@unpublished{certConst,
-  title        = {Certifying Constraints in Hardware Model Checking},
-  author       = {Nils Froleyks and Yu, Emily and Biere, Armin and Heljanko, Keijo},
-  year         = {2025},
-  note         = {Submitted},
-  keywords     = {pub}
-}
-
-@inproceedings{cav25,
-  title        = {Introducing Certificates to the Hardware Model Checking Competition},
-  author       = {Nils Froleyks and Emily Yu and Mathias Preiner and Armin Biere and Keijo Heljanko},
-  year         = {2025},
-  booktitle    = {Computer Aided Verification - 37th International Conference, {CAV} 2025, Zagreb, Croatia, July 21-25, 2025, Proceedings},
-  publisher    = {Springer},
-  series       = {Lecture Notes in Computer Science},
   keywords     = {pub}
 }
 
@@ -122,6 +158,14 @@
   keywords = {pub}
 }
 
+@unpublished{certConst,
+  title        = {Certifying Constraints in Hardware Model Checking},
+  author       = {Nils Froleyks and Yu, Emily and Biere, Armin and Heljanko, Keijo},
+  year         = {2025},
+  note         = {Submitted},
+  keywords     = {pub}
+}
+
 @inproceedings{DBLP:conf/fmcad/YuFBH22,
   title        = {Stratified Certification for K-{{Induction}}},
   author       = {Yu, Emily and Nils Froleyks and Biere, Armin and Heljanko, Keijo},
@@ -131,6 +175,16 @@
   pages        = {59--64},
   doi          = {10.34727/2022/ISBN.978-3-85448-053-2_11},
   editor       = {Griggio, Alberto and Rungta, Neha},
+  keywords     = {pub}
+}
+
+@inproceedings{froleyks2024ternary,
+  title        = {Ternary Simulation as Abstract Interpretation (Work in Progress)},
+  author       = {Nils Froleyks and Yu, Emily and Biere, Armin},
+  year         = {2024},
+  booktitle    = {MBMV 2024; 27. Workshop},
+  pages        = {148--151},
+  organization = {VDE},
   keywords     = {pub}
 }
 
@@ -146,39 +200,6 @@
   keywords     = {pub}
 }
 
-@article{DBLP:journals/ai/FroleyksHIJS21,
-  title        = {{SAT} Competition 2020},
-  author       = {Nils Froleyks and Marijn Heule and Markus Iser and Matti J{\"{a}}rvisalo and Martin Suda},
-  year         = {2021},
-  journal      = {Artif. Intell.},
-  volume       = {301},
-  pages        = {103572},
-  doi          = {10.1016/j.artint.2021.103572},
-  keywords     = {pub}
-}
-
-@inproceedings{DBLP:conf/sat/BiereFFH23,
-  title        = {The {SAT} Museum},
-  author       = {Armin Biere and Mathias Fleury and Nils Froleyks and Marijn J. H. Heule},
-  year         = {2023},
-  booktitle    = {Proceedings of the 14th International Workshop on Pragmatics of {SAT} co-located with the 26th International Conference on Theory and Applications of Satisfiability Testing {(SAT} 2023), Alghero, Italy, July 4, 2023},
-  publisher    = {CEUR-WS.org},
-  series       = {{CEUR} Workshop Proceedings},
-  volume       = {3545},
-  pages        = {72--87},
-  url          = {https://ceur-ws.org/Vol-3545/paper6.pdf},
-  editor       = {Matti J{\"{a}}rvisalo and Daniel Le Berre},
-  keywords     = {pub}
-}
-
-@unpublished{pollitt2025cadical3,
-  author = {Florian Pollitt and Mathias Fleury and Katalin Fazekas and Nils Froleyks and Armin Biere},
-  title = {CaDiCaL 3.0: Proofs, Algorithms, Implied Literals, and Robust Scheduling},
-  note = {Submitted},
-  year = {2025},
-  keywords     = {pub}
-}
-
 @inproceedings{froleyks2017using,
   title        = {Using an algorithm portfolio to solve sokoban},
   author       = {Nils Froleyks and Balyo, Tom{\'a}{\v{s}}},
@@ -186,19 +207,6 @@
   booktitle    = {Proceedings of the International Symposium on Combinatorial Search},
   volume       = {8},
   pages        = {165--166},
-  keywords     = {pub}
-}
-
-@inproceedings{DBLP:conf/socs/FroleyksBS19,
-  title = {{{PASAR}} - Planning as Satisfiability with Abstraction Refinement},
-  booktitle = {Proceedings of the Twelfth International Symposium on Combinatorial Search, {{SOCS}} 2019, Napa, California, 16-17 July 2019},
-  author = {Nils Froleyks and Balyo, Tom{\'a}{\v{s}} and Schreiber, Dominik},
-  editor = {Surynek, Pavel and Yeoh, William},
-  year = {2019},
-  pages = {70--78},
-  publisher = {AAAI Press},
-  bibsource = {dblp computer science bibliography, https://dblp.org},
-  timestamp = {Wed, 07 Dec 2022 23:11:31 +0100},
   keywords     = {pub}
 }
 
