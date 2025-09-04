@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Postdoc KU Leuven</a>, working on Provably correct automated reasoning at scale.
+subtitle: <a href='#'>Postdoc KU Leuven</a>, working on provably correct automated reasoning at scale.
 
 profile:
   align: right
