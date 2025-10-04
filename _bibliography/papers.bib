@@ -1,260 +1,253 @@
----
----
-@InProceedings{10.1007/978-3-031-98668-0_14,
-doi = {10.1007/978-3-031-98668-0_14},
-author="Froleyks, Nils
-and Yu, Emily
-and Preiner, Mathias
-and Biere, Armin
-and Heljanko, Keijo",
-editor="Piskac, Ruzica
-and Rakamari{\'{c}}, Zvonimir",
-title="Introducing Certificates to the Hardware Model Checking Competition",
-booktitle="Computer Aided Verification",
-year="2025",
-publisher="Springer Nature Switzerland",
-address="Cham",
-pages="281--295",
-abstract="Certification was made mandatory for the first time in the latest hardware model checking competition. In this case study, we investigate the trade-offs of requiring certificates for both passing and failing properties in the competition. Our evaluation shows that participating model checkers were able to produce compact, correct certificates that could be verified with minimal overhead. Furthermore, the certifying winner of the competition outperforms the previous non-certifying state-of-the-art model checker, demonstrating that certification can be adopted without compromising model checking efficiency.",
-isbn="978-3-031-98668-0",
-selected={true}
-}
-
-@article{DBLP:journals/ai/FroleyksHIJS21,
-  title        = {{SAT} Competition 2020},
-  author       = {Nils Froleyks and Marijn Heule and Markus Iser and Matti J{\"{a}}rvisalo and Martin Suda},
-  year         = {2021},
-  journal      = {Artif. Intell.},
-  volume       = {301},
-  pages        = {103572},
-  doi          = {10.1016/j.artint.2021.103572},
-  keywords     = {pub},
-  abstract     = {The SAT Competitions constitute a well-established series of yearly open international algorithm implementation competitions, focusing on the Boolean satisfiability (or propositional satisfiability, SAT) problem. In this article, we provide a detailed account on the 2020 instantiation of the SAT Competition, including the new competition tracks and benchmark selection procedures, overview of solving strategies implemented in top-performing solvers, and a detailed analysis of the empirical data obtained from running the competition.},
-  selected     = {true}
+@inproceedings{DBLP:conf/cav/FroleyksYPBH25,
+  title = {Introducing Certificates to the Hardware Model Checking Competition},
+  booktitle = {Computer Aided Verification - 37th International Conference, {{CAV}} 2025, Zagreb, Croatia, July 23-25, 2025, Proceedings, Part {{I}}},
+  author = {Froleyks, Nils and Yu, Emily and Preiner, Mathias and Biere, Armin and Heljanko, Keijo},
+  editor = {Piskac, Ruzica and Rakamaric, Zvonimir},
+  year = {2025},
+  series = {Lecture Notes in Computer Science},
+  volume = {15931},
+  pages = {281--295},
+  publisher = {Springer},
+  doi = {10.1007/978-3-031-98668-0\_14},
+  abstract = {Certification was made mandatory for the first time in the latest hardware model checking competition. In this case study, we investigate the trade-offs of requiring certificates for both passing and failing properties in the competition. Our evaluation shows that participating model checkers were able to produce compact, correct certificates that could be verified with minimal overhead. Furthermore, the certifying winner of the competition outperforms the previous non-certifying state-of-the-art model checker, demonstrating that certification can be adopted without compromising model checking efficiency.},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  keywords = {froleyks},
+  timestamp = {Tue, 05 Aug 2025 22:38:31 +0200},
+  pdf = {Froleyks et al. - 2025 - Introducing certificates to the hardware model checking competition.pdf},
+  file = {/home/froleyks/Zotero/storage/28JMSU2E/Froleyks et al. - 2025 - Introducing certificates to the hardware model checking competition.pdf},
+  selected={true}
 }
 
 @inproceedings{DBLP:conf/fmcad/FroleyksB21,
-  title        = {Single Clause Assumption without Activation Literals to Speed-up {IC3}},
-  author       = {Nils Froleyks and Armin Biere},
-  year         = {2021},
-  booktitle    = {Formal Methods in Computer Aided Design, {FMCAD} 2021},
-  publisher    = {{IEEE}},
-  pages        = {72--76},
-  doi          = {10.34727/2021/isbn.978-3-85448-046-4_15},
-  keywords     = {pub},
-  abstract     = "We extend the well-established assumption-based interface of incremental SAT solvers to clauses, allowing the addition of a temporary clause that has the same lifespan as literal assumptions. Our approach is efficient and easy to implement in modern CDCL-based solvers. Compared to previous approaches, it does not come with any memory overhead and does not slow down the solver due to disabled activation literals, thus eliminating the need for algorithms like IC3 to restart the SAT solver. All clauses learned under literal and clause assumptions are safe to keep and not implicitly invalidated for containing an activation literal. These changes increase the quality of learned clauses, resulting in better generalization for IC3. We implement the extension in the SAT solver CaDiCaL and evaluate it with the IC3 implementation in the model checker ABC. Our experiments on the benchmarks from a recent hardware model checking competition show a speedup for the average SAT call and a reduction in number of calls per verification instance, resulting in a substantial improvement in model checking time.",
+  title = {Single Clause Assumption without Activation Literals to Speed-up {{IC3}}},
+  booktitle = {Formal Methods in Computer Aided Design, {{FMCAD}} 2021},
+  author = {Froleyks, Nils and Biere, Armin},
+  year = {2021},
+  pages = {72--76},
+  publisher = {IEEE},
+  doi = {10.34727/2021/isbn.978-3-85448-046-4_15},
+  abstract = {We extend the well-established assumption-based interface of incremental SAT solvers to clauses, allowing the addition of a temporary clause that has the same lifespan as literal assumptions. Our approach is efficient and easy to im- plement in modern CDCL-based solvers. Compared to previous approaches, it does not come with any memory overhead and does not slow down the solver due to disabled activation literals, thus eliminating the need for algorithms like IC3 to restart the SAT solver. All clauses learned under literal and clause assumptions are safe to keep and not implicitly invalidated for containing an activation literal. These changes increase the quality of learned clauses, resulting in better generalization for IC3. We implement the extension in the SAT solver CaDiCaL and evaluate it with the IC3 implementation in the model checker ABC. Our experiments on the benchmarks from a recent hardware model checking competition show a speedup for the average SAT call and a reduction in number of calls per verification instance, resulting in a substantial improvement in model checking time.},
+  keywords = {froleyks},
+  pdf = {Froleyks and Biere - 2021 - Single clause assumption without activation literals to speed-up IC3.pdf},
+  file = {/home/froleyks/Zotero/storage/RN89LNE7/Froleyks and Biere - 2021 - Single clause assumption without activation literals to speed-up IC3.pdf},
   selected={true}
 }
 
 @inproceedings{DBLP:conf/cav/BiereFFFFP24,
-  title        = {CaDiCaL 2.0},
-  author       = {Armin Biere and Tobias Faller and Katalin Fazekas and Mathias Fleury and Nils Froleyks and Florian Pollitt},
-  year         = {2024},
-  booktitle    = {{CAV} {(1)}},
-  publisher    = {Springer},
-  series       = {Lecture Notes in Computer Science},
-  volume       = {14681},
-  pages        = {133--152},
-  keywords     = {pub},
-  abstract     = "The SAT solver CaDiCaL provides a rich feature set with a clean library interface. It has been adopted by many users, is well documented and easy to extend due to its effective testing and debugging infrastructure. In this tool paper we give a high-level introduction into the solver architecture and then go briefly over implemented techniques. We describe basic features and novel advanced usage scenarios. Experiments confirm that CaDiCaL despite this flexibility has state-of-the-art performance both in a stand-alone as well as incremental setting.",
-  doi          = {10.1007/978-3-031-65627-9_7,},
+  title = {{{CaDiCaL}} 2.0},
+  booktitle = {{{CAV}} (1)},
+  author = {Biere, Armin and Faller, Tobias and Fazekas, Katalin and Fleury, Mathias and Froleyks, Nils and Pollitt, Florian},
+  year = {2024},
+  series = {Lecture Notes in Computer Science},
+  volume = {14681},
+  pages = {133--152},
+  publisher = {Springer},
+  abstract = {The SAT solver CaDiCaL provides a rich feature set with a clean library interface. It has been adopted by many users, is well documented and easy to extend due to its effective testing and debugging infrastructure. In this tool paper we give a high-level introduction into the solver architecture and then go briefly over implemented techniques. We describe basic features and novel advanced usage scenarios. Experiments confirm that CaDiCaL despite this flexibility has state-of-the-art performance both in a stand-alone as well as incremental setting.},
+  keywords = {froleyks},
+  pdf = {Biere et al. - 2024 - CaDiCaL 2.0.pdf},
+  file = {/home/froleyks/Zotero/storage/P37FWFAC/Biere et al. - 2024 - CaDiCaL 2.0.pdf},
   selected={true}
 }
 
 @inproceedings{DBLP:conf/ijcar/FroleyksYBH24,
-  title        = {Certifying Phase Abstraction},
-  author       = {Nils Froleyks and Yu, Emily and Biere, Armin and Heljanko, Keijo},
-  year         = {2024},
-  booktitle    = {Automated Reasoning - 12th International Joint Conference, {{IJCAR}} 2024, Nancy, France, July 3-6, 2024, Proceedings, Part {{I}}},
-  publisher    = {Springer},
-  series       = {Lecture Notes in Computer Science},
-  volume       = {14739},
-  pages        = {284--303},
-  doi          = {10.1007/978-3-031-63498-7_17},
-  editor       = {Benzm{\"u}ller, Christoph and Heule, Marijn J. H. and Schmidt, Renate A.},
-  keywords     = {pub}
+  title = {Certifying Phase Abstraction},
+  booktitle = {Automated Reasoning - 12th International Joint Conference, {{IJCAR}} 2024, Nancy, France, July 3-6, 2024, Proceedings, Part {{I}}},
+  author = {Froleyks, Nils and Yu, Emily and Biere, Armin and Heljanko, Keijo},
+  editor = {Benzm{\"u}ller, Christoph and Heule, Marijn J. H. and Schmidt, Renate A.},
+  year = {2024},
+  series = {Lecture Notes in Computer Science},
+  volume = {14739},
+  pages = {284--303},
+  publisher = {Springer},
+  doi = {10.1007/978-3-031-63498-7\_17},
+  abstract = {Certification helps to increase trust in formal verification of safety-critical systems which require assurance on their correctness. In hardware model checking, a widely used formal verification technique, phase abstraction is considered one of the most commonly used preprocessing techniques. We present an approach to certify an extended form of phase abstraction using a generic certificate format. As in earlier works our approach involves constructing a witness circuit with an inductive invariant property that certifies the correctness of the entire model checking process, which is then validated by an independent certificate checker. We have implemented and evaluated the proposed approach including certification for various preprocessing configurations on hardware model checking competition benchmarks. As an improvement on previous work in this area, the proposed method is able to efficiently complete certification with an overhead of a fraction of model checking time.},
+  keywords = {froleyks},
+  pdf = {Froleyks et al. - 2024 - Certifying phase abstraction.pdf},
+  file = {/home/froleyks/Zotero/storage/GUTJEJ8L/Froleyks et al. - 2024 - Certifying phase abstraction.pdf},
+  selected={true}
+}
+
+@article{DBLP:journals/ai/FroleyksHIJS21,
+  title = {{{SAT}} Competition 2020},
+  author = {Froleyks, Nils and Heule, Marijn and Iser, Markus and J{\"a}rvisalo, Matti and Suda, Martin},
+  year = {2021},
+  journal = {Artificial Intelligence},
+  volume = {301},
+  pages = {103572},
+  doi = {10.1016/j.artint.2021.103572},
+  abstract = {The SAT Competitions constitute a well-established series of yearly open international algorithm implementation competitions, focusing on the Boolean satisfiability (or propositional satisfiability, SAT) problem. In this article, we provide a detailed account on the 2020 instantiation of the SAT Competition, including the new competition tracks and benchmark selection procedures, overview of solving strategies implemented in top-performing solvers, and a detailed analysis of the empirical data obtained from running the competition.},
+  keywords = {froleyks},
+  pdf = {Froleyks et al. - 2021 - SAT competition 2020.pdf},
+  file = {/home/froleyks/Zotero/storage/3RJVLDWU/Froleyks et al. - 2021 - SAT competition 2020.pdf}
+}
+
+@inproceedings{DBLP:conf/artsit/BalyoF21,
+  title = {{{AI}} Assisted Design of Sokoban Puzzles Using Automated Planning},
+  booktitle = {{{ArtsIT}}, Interactivity and Game Creation - Creative Heritage. {{New}} Perspectives from Media Arts and Artificial Intelligence. 10th {{EAI}} International Conference, {{ArtsIT}} 2021, Virtual Event, December 2-3, 2021, Proceedings},
+  author = {Balyo, Tom{\'a}s and Froleyks, Nils},
+  editor = {W{\"o}lfel, Matthias and Bernhardt, Johannes and Thiel, Sonja},
+  year = {2021},
+  series = {Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering},
+  volume = {422},
+  pages = {424--441},
+  publisher = {Springer},
+  doi = {10.1007/978-3-030-95531-1\_29},
+  abstract = {Designing interesting and challenging levels for a puzzle game is a very difficult and time consuming task. It is often possible to develop random puzzle generators that can produce solvable levels. However, in order to obtain appealing levels, usually a human designer needs to be involved. In this paper we propose a new generic method for assisting human designers to create solvable levels for a puzzle game by using Automated Planning. We will demonstrate our method on the well-known Japanese puzzle game Sokoban.},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  keywords = {froleyks},
+  timestamp = {Thu, 06 Jul 2023 16:36:39 +0200},
+  pdf = {Balyo and Froleyks - 2021 - AI assisted design of sokoban puzzles using automated planning.pdf},
+  file = {/home/froleyks/Zotero/storage/NFC9H9M4/Balyo and Froleyks - 2021 - AI assisted design of sokoban puzzles using automated planning.pdf}
+}
+
+@inproceedings{DBLP:conf/fmcad/BiereFFF24,
+  title = {Clausal Equivalence Sweeping},
+  booktitle = {Formal Methods in Computer-Aided Design, {{FMCAD}} 2024, Prague, Czech Republic, October 15-18, 2024},
+  author = {Biere, Armin and Fazekas, Katalin and Fleury, Mathias and Froleyks, Nils},
+  editor = {Narodytska, Nina and R{\"u}mmer, Philipp},
+  year = {2024},
+  pages = {1--6},
+  publisher = {IEEE},
+  doi = {10.34727/2024/ISBN.978-3-85448-065-5\_29},
+  abstract = {The state-of-the-art to combinational equivalence checking is based on SAT sweeping. It recursively establishes equivalence of internal nodes of two circuits to prove equivalence of their outputs. The approach follows the topological order from inputs to outputs and makes use of simulation to refine the set of potentially equivalent nodes to reduce the number of SAT solver queries. This non-uniform hybrid reasoning, using both the circuit structure and a clausal encoding, is complex to orchestrate. In earlier work, clausal encoding was avoided using a dedicated circuit-aware SAT solver. Instead, we propose to perform SAT sweeping directly on the clausal encoding of the complete equivalence checking problem within the SAT solver, but again relying on a second, dedicated, internal SAT solver. Both SAT solvers work on a clausal representation. This allows to transparently make use of all the advanced reasoning capabilities of the SAT solver, particularly pre- and inprocessing techniques.},
+  keywords = {froleyks},
+  pdf = {Biere et al. - 2024 - Clausal equivalence sweeping.pdf},
+  file = {/home/froleyks/Zotero/storage/2XEQB2NA/Biere et al. - 2024 - Clausal equivalence sweeping.pdf}
+}
+
+@inproceedings{DBLP:conf/fmcad/FroleyksYB23,
+  title = {{{BIG}} Backbones},
+  booktitle = {{{FMCAD}}},
+  author = {Froleyks, Nils and Yu, Emily and Biere, Armin},
+  year = {2023},
+  pages = {162--167},
+  publisher = {IEEE},
+  abstract = {The backbone of a satisfiable formula is the set of literals that hold true in every model. In this paper we introduce Single Unit Resolution Backbone (SURB) which names both a polynomial-time algorithm for backbone extraction and a class of propositional formulas on which it is complete. We show that this class is a superset of the polynomial-time solvable SLUR formulas. The presented algorithm meets a lower bound on time complexity under the strong exponential-time hypothesis. As a second contribution, we present a version that operates on the binary implication graph (BIG) and implement it as a preprocessor in the recently introduced backbone extractor CADIBACK. Experiments on a large number of SAT competition benchmarks show that our implementation results in faster BIG backbone extraction by an order of magnitude. Additionally, incorporating it as a preprocessor enables CADIBACK to identify up to four times as many backbone literals early on.},
+  keywords = {froleyks},
+  pdf = {Froleyks et al. - 2023 - BIG Backbones.pdf},
+  file = {/home/froleyks/Zotero/storage/V3MXN9UQ/Froleyks et al. - 2023 - BIG backbones.pdf}
+}
+
+@inproceedings{DBLP:conf/fmcad/YuFBH22,
+  title = {Stratified Certification for K-{{Induction}}},
+  booktitle = {22nd Formal Methods in Computer-Aided Design, {{FMCAD}} 2022, Trento, Italy, October 17-21, 2022},
+  author = {Yu, Emily and Froleyks, Nils and Biere, Armin and Heljanko, Keijo},
+  editor = {Griggio, Alberto and Rungta, Neha},
+  year = {2022},
+  pages = {59--64},
+  publisher = {IEEE},
+  doi = {10.34727/2022/ISBN.978-3-85448-053-2_11},
+  abstract = {Our recently proposed certification framework for bit-level k-induction-based model checking has been shown to be quite effective in increasing the trust of verification results even though it partially involved quantifier reasoning. In this paper we show how to simplify the approach by assuming reset functions to be stratified. This way it can be lifted to word-level and in principle to other theories where quantifier reasoning is difficult. Our new method requires six simple SAT checks and one polynomial-time check, allowing certification to remain in co-NP while the previous approach required five SAT checks and one QBF check. Experimental results show a substantial performance gain for our new approach. Finally, we present and evaluate our new tool Certifaiger-wl which is able to certify k-induction-based word-level model checking.},
+  keywords = {froleyks},
+  pdf = {Yu et al. - 2022 - Stratified certification for k-Induction.pdf},
+  file = {/home/froleyks/Zotero/storage/TJ7TS38W/Yu et al. - 2022 - Stratified certification for k-Induction.pdf}
+}
+
+@inproceedings{DBLP:conf/fmcad/YuFBH23,
+  title = {Towards Compositional Hardware Model Checking Certification},
+  booktitle = {Formal Methods in Computer-Aided Design, {{FMCAD}} 2023, Ames, {{IA}}, {{USA}}, October 24-27, 2023},
+  author = {Yu, Emily and Froleyks, Nils and Biere, Armin and Heljanko, Keijo},
+  editor = {Nadel, Alexander and Rozier, Kristin Yvonne},
+  year = {2023},
+  pages = {1--11},
+  publisher = {IEEE},
+  doi = {10.34727/2023/ISBN.978-3-85448-060-0_12},
+  abstract = {In this paper, we revisit and formalize temporal decomposition, as one of the most basic, widely-used and effective preprocessing techniques in hardware model checking. The main contribution is a certification framework for hardware model checking using temporal decomposition. Our approach enables generation of a single inductive invariant in a compositional way using inductive invariant certificates provided by existing certifying model checkers on the result of preprocessing a model through temporal decomposition. We implement and evaluate the method on hardware model checking competition benchmarks. The experiments confirm the effectiveness of temporal decomposition. The proposed certification approach makes it feasible to generate a generic proof for model checking and preprocessing.},
+  keywords = {froleyks},
+  pdf = {Yu et al. - 2023 - Towards compositional hardware model checking certification.pdf},
+  file = {/home/froleyks/Zotero/storage/IZKEZ3WM/Yu et al. - 2023 - Towards compositional hardware model checking certification.pdf}
+}
+
+@inproceedings{DBLP:conf/sat/BiereFFF24,
+  title = {Clausal Congruence Closure},
+  booktitle = {27th International Conference on Theory and Applications of Satisfiability Testing, {{SAT}} 2024, August 21-24, 2024, Pune, India},
+  author = {Biere, Armin and Fazekas, Katalin and Fleury, Mathias and Froleyks, Nils},
+  editor = {Chakraborty, Supratik and Jiang, Jie-Hong Roland},
+  year = {2024},
+  series = {{{LIPIcs}}},
+  volume = {305},
+  pages = {6:1--6:25},
+  publisher = {Schloss Dagstuhl - Leibniz-Zentrum f{\"u}r Informatik},
+  doi = {10.4230/LIPICS.SAT.2024.6},
+  abstract = {Many practical applications of satisfiability solving employ multiple steps to encode an original problem formulation into conjunctive normal form. Often circuits are used as intermediate representation before encoding those circuits into clausal form. These circuits however might contain redundant isomorphic sub-circuits. If blindly translated into clausal form, this redundancy is retained and increases solving time unless specific preprocessing algorithms are used. Furthermore, such redundant sub-formula structure might only emerge during solving and needs to be addressed by inprocessing. This paper presents a new approach which extracts gate information from the formula and applies congruence closure to match and eliminate redundant gates. Besides new algorithms for gate extraction, we also describe previous unpublished attempts to tackle this problem. Experiments focus on the important problem of combinational equivalence checking for hardware designs and show that our new approach yields a substantial gain in CNF solver performance.},
+  keywords = {froleyks},
+  pdf = {Biere et al. - 2024 - Clausal Congruence Closure.pdf},
+  file = {/home/froleyks/Zotero/storage/WTLENVRV/Biere et al. - 2024 - Clausal congruence closure.pdf}
+}
+
+@inproceedings{DBLP:conf/sat/BiereFFH23,
+  title = {The {{SAT}} Museum},
+  booktitle = {Proceedings of the 14th International Workshop on Pragmatics of {{SAT}} Co-Located with the 26th International Conference on Theory and Applications of Satisfiability Testing ({{SAT}} 2023), Alghero, Italy, July 4, 2023},
+  author = {Biere, Armin and Fleury, Mathias and Froleyks, Nils and Heule, Marijn J. H.},
+  editor = {J{\"a}rvisalo, Matti and Berre, Daniel Le},
+  year = {2023},
+  series = {{{CEUR}} Workshop Proceedings},
+  volume = {3545},
+  pages = {72--87},
+  publisher = {CEUR-WS.org},
+  abstract = {The virtual SAT Solver Museum is an effort towards preserving historical SAT solvers, by collecting and porting their source code to modern compilers and evaluating them on representative benchmark sets on the same hardware. This allows us to compare historic and modern solvers in the same environment. Our results clearly show a remarkable improvement of SAT solver performance in the last 30 years.},
+  keywords = {froleyks},
+  pdf = {Biere et al. - 2023 - The SAT museum.pdf},
+  file = {/home/froleyks/Zotero/storage/JQBQ9CZC/Biere et al. - 2023 - The SAT museum.pdf}
+}
+
+@inproceedings{DBLP:conf/sat/BiereFW23,
+  title = {{{CadiBack}}: {{Extracting}} Backbones with {{CaDiCaL}}},
+  booktitle = {{{SAT}}},
+  author = {Biere, Armin and Froleyks, Nils and Wang, Wenxi},
+  year = {2023},
+  series = {{{LIPIcs}}},
+  volume = {271},
+  pages = {3:1--3:12},
+  publisher = {Schloss Dagstuhl - Leibniz-Zentrum f{\"u}r Informatik},
+  abstract = {The backbone of a satisfiable formula is the set of literals that are true in all its satisfying assignments. Backbone computation can improve a wide range of SAT-based applications, such as verification, fault localization and product configuration. In this tool paper, we introduce a new backbone extraction tool called CadiBack. It takes advantage of unique features available in our state-of-the-art SAT solver CaDiCaL including transparent inprocessing and single clause assumptions, which have not been evaluated in this context before. In addition, CaDiCaL is enhanced with an improved algorithm to support model rotation by utilizing watched literal data structures. In our comprehensive experiments with a large number of benchmarks, CadiBack solves 60\% more instances than the state-of-the-art backbone extraction tool MiniBones. Our tool is thoroughly tested with fuzzing, internal correctness checking and cross-checking on a large benchmark set. It is publicly available as open source, well documented and easy to extend.},
+  keywords = {froleyks},
+  pdf = {Biere et al. - 2023 - CadiBack Extracting backbones with CaDiCaL.pdf},
+  file = {/home/froleyks/Zotero/storage/ICVR2T7J/Biere et al. - 2023 - CadiBack Extracting backbones with CaDiCaL.pdf}
+}
+
+@inproceedings{DBLP:conf/socs/FroleyksB17,
+  title = {Using an Algorithm Portfolio to Solve Sokoban},
+  booktitle = {Proceedings of the Tenth International Symposium on Combinatorial Search, {{SOCS}} 2017, 16-17 June 2017, Pittsburgh, Pennsylvania, {{USA}}},
+  author = {Froleyks, Nils Christian and Balyo, Tom{\'a}s},
+  editor = {Fukunaga, Alex and Kishimoto, Akihiro},
+  year = {2017},
+  pages = {165--166},
+  publisher = {AAAI Press},
+  doi = {10.1609/SOCS.V8I1.18416},
+  abstract = {The game of Sokoban is an interesting platform for algorithm research. It is hard for humans and computers alike. Even small levels can take a lot of computation for all known algorithms. In this paper we will describe how a search based Sokoban solver can be structured and which algorithms can be used to realize each critical part. We implement a variety of those, construct a number of different solvers and combine them into an algorithm portfolio. The solver we construct this way can outperform existing solvers when run in parallel, that is, our solver with 16 processors outperforms the previous sequential solvers.},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  keywords = {froleyks},
+  pdf = {Froleyks and Balyo - 2017 - Using an algorithm portfolio to solve sokoban.pdf},
+  timestamp = {Mon, 18 Dec 2023 16:58:34 +0100}
 }
 
 @inproceedings{DBLP:conf/socs/FroleyksBS19,
   title = {{{PASAR}} - Planning as Satisfiability with Abstraction Refinement},
   booktitle = {Proceedings of the Twelfth International Symposium on Combinatorial Search, {{SOCS}} 2019, Napa, California, 16-17 July 2019},
-  author = {Nils Froleyks and Balyo, Tom{\'a}{\v{s}} and Schreiber, Dominik},
+  author = {Froleyks, Nils Christian and Balyo, Tom{\'a}s and Schreiber, Dominik},
   editor = {Surynek, Pavel and Yeoh, William},
   year = {2019},
   pages = {70--78},
   publisher = {AAAI Press},
+  doi = {10.1609/SOCS.V10I1.18504},
+  abstract = {One of the classical approaches to automated planning is the reduction to propositional satisfiability (SAT). Recently, it has been shown that incremental SAT solving can increase the capabilities of several modern encodings for SAT-based planning. In this paper, we present a further improvement to SAT-based planning by introducing a new algorithm named PASAR based on the principles of counterexample guided abstraction refinement (CEGAR). As an abstraction of the original problem, we use a simplified encoding where interference between actions is generally allowed. Abstract plans are converted into actual plans where possible or otherwise used as a counterexample to refine the abstraction. Using benchmark domains from recent International Planning Competitions, we compare our approach to different state-of-the-art planners and find that, in particular, combining PASAR with forward state-space search techniques leads to promising results.},
   bibsource = {dblp computer science bibliography, https://dblp.org},
-  timestamp = {Wed, 07 Dec 2022 23:11:31 +0100},
-  keywords     = {pub}
-}
-
-@inproceedings{DBLP:conf/sat/BiereFFH23,
-  title        = {The {SAT} Museum},
-  author       = {Armin Biere and Mathias Fleury and Nils Froleyks and Marijn J. H. Heule},
-  year         = {2023},
-  booktitle    = {Proceedings of the 14th International Workshop on Pragmatics of {SAT} co-located with the 26th International Conference on Theory and Applications of Satisfiability Testing {(SAT} 2023), Alghero, Italy, July 4, 2023},
-  publisher    = {CEUR-WS.org},
-  series       = {{CEUR} Workshop Proceedings},
-  volume       = {3545},
-  pages        = {72--87},
-  url          = {https://ceur-ws.org/Vol-3545/paper6.pdf},
-  editor       = {Matti J{\"{a}}rvisalo and Daniel Le Berre},
-  keywords     = {pub}
-}
-
-@inproceedings{DBLP:conf/sat/BiereFW23,
-  title        = {CadiBack: Extracting Backbones with CaDiCaL},
-  author       = {Armin Biere and Nils Froleyks and Wenxi Wang},
-  year         = {2023},
-  booktitle    = {{SAT}},
-  publisher    = {Schloss Dagstuhl - Leibniz-Zentrum f{\"{u}}r Informatik},
-  series       = {LIPIcs},
-  volume       = {271},
-  pages        = {3:1--3:12},
-  keywords     = {pub}
-}
-
-@inproceedings{DBLP:conf/fmcad/FroleyksYB23,
-  title        = {{BIG} Backbones},
-  author       = {Nils Froleyks and Emily Yu and Armin Biere},
-  year         = {2023},
-  booktitle    = {{FMCAD}},
-  publisher    = {{IEEE}},
-  pages        = {162--167},
-  keywords     = {pub}
-}
-
-@inproceedings{DBLP:conf/sat/BiereFFF24,
-  title        = {Clausal Congruence Closure},
-  author       = {Armin Biere and Katalin Fazekas and Mathias Fleury and Nils Froleyks},
-  year         = {2024},
-  booktitle    = {27th International Conference on Theory and Applications of Satisfiability Testing, {SAT} 2024, August 21-24, 2024, Pune, India},
-  publisher    = {Schloss Dagstuhl - Leibniz-Zentrum f{\"{u}}r Informatik},
-  series       = {LIPIcs},
-  volume       = {305},
-  pages        = {6:1--6:25},
-  doi          = {10.4230/LIPICS.SAT.2024.6},
-  editor       = {Supratik Chakraborty and Jie{-}Hong Roland Jiang},
-  keywords     = {pub}
-}
-
-@inproceedings{DBLP:conf/fmcad/BiereFFF24,
-  title        = {Clausal Equivalence Sweeping},
-  author       = {Armin Biere and Katalin Fazekas and Mathias Fleury and Nils Froleyks},
-  year         = {2024},
-  booktitle    = {Formal Methods in Computer-Aided Design, {FMCAD} 2024, Prague, Czech Republic, October 15-18, 2024},
-  publisher    = {{IEEE}},
-  pages        = {1--6},
-  doi          = {10.34727/2024/ISBN.978-3-85448-065-5_29},
-  editor       = {Nina Narodytska and Philipp R{\"{u}}mmer},
-  keywords     = {pub}
-}
-
-@unpublished{biere2025clausaleq,
-  author = {Armin Biere and Katalin Fazekas and Mathias Fleury and Nils Froleyks and Florian Pollitt},
-  title = {Clausal Equivalence Checking},
-  note = {Journal Submission},
-  year = {2025},
-  keywords = {pub}
-}
-
-@unpublished{certConst,
-  title        = {Certifying Constraints in Hardware Model Checking},
-  author       = {Nils Froleyks and Yu, Emily and Biere, Armin and Heljanko, Keijo},
-  year         = {2025},
-  note         = {Submitted},
-  keywords     = {pub}
-}
-
-@inproceedings{DBLP:conf/fmcad/YuFBH22,
-  title        = {Stratified Certification for K-{{Induction}}},
-  author       = {Yu, Emily and Nils Froleyks and Biere, Armin and Heljanko, Keijo},
-  year         = {2022},
-  booktitle    = {22nd Formal Methods in Computer-Aided Design, {{FMCAD}} 2022, Trento, Italy, October 17-21, 2022},
-  publisher    = {IEEE},
-  pages        = {59--64},
-  doi          = {10.34727/2022/ISBN.978-3-85448-053-2_11},
-  editor       = {Griggio, Alberto and Rungta, Neha},
-  keywords     = {pub}
+  keywords = {froleyks},
+  timestamp = {Tue, 13 Aug 2024 08:06:44 +0200},
+  pdf = {Froleyks et al. - 2019 - PASAR - planning as satisfiability with abstraction refinement.pdf},
+  file = {/home/froleyks/Zotero/storage/M3UBI3LC/Froleyks et al. - 2019 - PASAR - planning as satisfiability with abstraction refinement.pdf}
 }
 
 @inproceedings{froleyks2024ternary,
-  title        = {Ternary Simulation as Abstract Interpretation (Work in Progress)},
-  author       = {Nils Froleyks and Yu, Emily and Biere, Armin},
-  year         = {2024},
-  booktitle    = {MBMV 2024; 27. Workshop},
-  pages        = {148--151},
-  organization = {VDE},
-  keywords     = {pub}
-}
-
-@inproceedings{DBLP:conf/fmcad/YuFBH23,
-  title        = {Towards Compositional Hardware Model Checking Certification},
-  author       = {Yu, Emily and Nils Froleyks and Biere, Armin and Heljanko, Keijo},
-  year         = {2023},
-  booktitle    = {Formal Methods in Computer-Aided Design, {{FMCAD}} 2023, Ames, {{IA}}, {{USA}}, October 24-27, 2023},
-  publisher    = {IEEE},
-  pages        = {1--11},
-  doi          = {10.34727/2023/ISBN.978-3-85448-060-0_12},
-  editor       = {Nadel, Alexander and Rozier, Kristin Yvonne},
-  keywords     = {pub}
-}
-
-@inproceedings{froleyks2017using,
-  title        = {Using an algorithm portfolio to solve sokoban},
-  author       = {Nils Froleyks and Balyo, Tom{\'a}{\v{s}}},
-  year         = {2017},
-  booktitle    = {Proceedings of the International Symposium on Combinatorial Search},
-  volume       = {8},
-  pages        = {165--166},
-  keywords     = {pub}
-}
-
-@inproceedings{balyo2021ai,
-  title        = {Ai assisted design of sokoban puzzles using automated planning},
-  author       = {Balyo, Tom{\'a}{\v{s}} and Nils Froleyks},
-  year         = {2021},
-  booktitle    = {International Conference on ArtsIT, Interactivity and Game Creation},
-  pages        = {424--441},
-  organization = {Springer},
-  keywords     = {pub}
-}
-
-@misc{hwmcc20,
-  title        = {Hardware Model Checking Competition (HWMCC'20)},
-  author       = {Armin Biere and Nils Froleyks and Mathias Preiner},
-  year         = {2020},
-  url          = {https://hwmcc.github.io/2020},
-  keywords     = {tec}
-}
-
-@inproceedings{BiereFroleyksPreiner-FMCAD24,
-  title        = {Hardware Model Checking Competition 2024},
-  author       = {Armin Biere and Nils Froleyks and Mathias Preiner},
-  year         = {2024},
-  booktitle    = {Proceedings 24th International Conference on Formal Methods in Computer-Aided Design (FMCAD'24)},
-  publisher    = {{TU Wien Academic Press}},
-  pages        = {7},
-  doi          = {10.34727/2024/isbn.978-3-85448-065-5_6},
-  editor       = {Nina Narodytska and Philipp R{\"u}mmer},
-  keywords     = {tec}
-}
-
-@proceedings{SC2020,
-  title        = {Proceedings of SAT Competition 2020; Solver and Benchmark Descriptions},
-  year         = {2020},
-  publisher    = {Department of Computer Science, University of Helsinki},
-  series       = {Department of Computer Science Report Series B},
-  volume       = {B-2020-1},
-  editor       = {Balyo, Tom{\'{a}}{\v{s}} and Nils Froleyks and Heule, Marijn J. H. and Iser, Markus and J\"arvisalo, Matti and Suda, Martin},
-  keywords     = {tec}
-}
-
-@article{balyo2021results,
-  title        = {The results of SAT competition 2021},
-  author       = {Balyo, Tom{\'a}{\v{s}} and Nils Froleyks and Iser, Markus and J{\"a}rvisalo, Matti and Suda, Martin},
-  year         = {2021},
-  journal      = {Sat},
-  volume       = {2021},
-  keywords     = {tec}
+  title = {Ternary Simulation as Abstract Interpretation (Work in Progress)},
+  booktitle = {{{MBMV}} 2024; 27. {{Workshop}}},
+  author = {Froleyks, Nils and Yu, Emily and Biere, Armin},
+  year = {2024},
+  pages = {148--151},
+  publisher = {VDE},
+  abstract = {We introduce a formalization of ternary simulation as abstract interpretation along with a widening operator to speed up convergence. With the same goal, we present a subsumption algorithm that can determine termination earlier than the usual approach using hash sets. Additionally, we introduce a narrowing operator that utilizes recent advances in backbone extraction, allowing to increase the overapproximation precision in simulation at any time. The experiments evaluate the presented techniques in the context of hardware model checking.},
+  keywords = {froleyks},
+  pdf = {Froleyks et al. - 2024 - Ternary simulation as abstract interpretation (work in progress).pdf},
+  file = {/home/froleyks/Zotero/storage/KVI4K5SQ/Froleyks et al. - 2024 - Ternary simulation as abstract interpretation (work in progress).pdf}
 }
