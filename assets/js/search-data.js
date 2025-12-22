@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -422,11 +422,11 @@ ninja.data = [{
           description: "CaDiCaL BackBone Analyzer",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_cadiback/";
-            },},{id: "projects-cerbotor",
-          title: 'Cerbotor',
+            },},{id: "projects-cerbtora",
+          title: 'Cerbtora',
           description: "Certificate checker for Btor2",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_cerbotor/";
+              window.location.href = "/projects/3_cerbtora/";
             },},{id: "projects-voiraig",
           title: 'Voiraig',
           description: "The first certifying model checker",
