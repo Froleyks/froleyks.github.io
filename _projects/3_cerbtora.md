@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Cerbotor
+title: Cerbtora
 description: Certificate checker for Btor2
-img: assets/img/cerbotor.png
+img: assets/img/cerbtora.png
 importance: 3
-category: work
+category: Model Checking
 redirect: https://github.com/Froleyks/cerbotor
 ---

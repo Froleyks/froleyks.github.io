@@ -667,6 +667,17 @@ footer.sticky-bottom {
   }
 
   .card {
+    figure {
+      margin: 0;
+    }
+
+    .card-img-top {
+      display: block;
+      height: 250px;
+      object-fit: contain;
+      padding: 1rem 1.25rem 0.5rem;
+    }
+
     img {
       width: 100%;
     }
