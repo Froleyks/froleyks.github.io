@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
+title: software
 permalink: /projects/
 description: 
 nav: true
 nav_order: 3
-display_categories: [SAT, Model Checking]
+display_categories: [Model Checking, SAT]
 horizontal: false
 ---
 
