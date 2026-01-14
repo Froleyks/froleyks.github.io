@@ -16,8 +16,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-projects",
-          title: "projects",
+        },{id: "nav-software",
+          title: "software",
           description: "",
           section: "Navigation",
           handler: () => {
@@ -433,18 +433,18 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_voiraig/";
             },},{
-        id: 'social-dblp',
-        title: 'DBLP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://dblp.org/pid/201/5325.html", "_blank");
-        },
-      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
           window.open("mailto:%6E%66%72%6F%6C%65%79%6B%73@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=FOLbe5kAAAAJ", "_blank");
         },
       },{
         id: 'social-github',
@@ -454,13 +454,6 @@ ninja.data = [{
           window.open("https://github.com/froleyks", "_blank");
         },
       },{
-        id: 'social-linkedin',
-        title: 'LinkedIn',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.linkedin.com/in/nils-froleyks-84560b339", "_blank");
-        },
-      },{
         id: 'social-orcid',
         title: 'ORCID',
         section: 'Socials',
@@ -468,18 +461,18 @@ ninja.data = [{
           window.open("https://orcid.org/0000-0003-3925-3438", "_blank");
         },
       },{
-        id: 'social-rss',
-        title: 'RSS Feed',
+        id: 'social-dblp',
+        title: 'DBLP',
         section: 'Socials',
         handler: () => {
-          window.open("/feed.xml", "_blank");
+          window.open("https://dblp.org/pid/201/5325.html", "_blank");
         },
       },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
+        id: 'social-linkedin',
+        title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=FOLbe5kAAAAJ", "_blank");
+          window.open("https://www.linkedin.com/in/nils-froleyks-84560b339", "_blank");
         },
       },{
         id: 'social-telegram',
