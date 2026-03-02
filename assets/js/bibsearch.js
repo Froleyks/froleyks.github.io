@@ -50,15 +50,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
+  const input = document.getElementById("bibsearch");
+
+  const focusEntryFromHash = (hashValue) => {
+    if (!hashValue) return false;
+    const target = document.getElementById(hashValue);
+    if (!target || !target.closest(".publications")) return false;
+
+    input.value = "";
+    filterItems("");
+
+    document.querySelectorAll(".bibsearch-target").forEach((el) => el.classList.remove("bibsearch-target"));
+    target.classList.add("bibsearch-target");
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.setTimeout(() => target.classList.remove("bibsearch-target"), 2000);
+    return true;
+  };
+
   const updateInputField = () => {
-    const hashValue = decodeURIComponent(window.location.hash.substring(1)); // Remove the '#' character
-    document.getElementById("bibsearch").value = hashValue;
-    filterItems(hashValue);
+    const rawHash = window.location.hash.substring(1); // Remove the '#' character
+    let hashValue = rawHash;
+    try {
+      hashValue = decodeURIComponent(rawHash);
+    } catch {
+      // Keep raw hash value if decoding fails.
+    }
+
+    if (focusEntryFromHash(hashValue)) return;
+
+    input.value = hashValue;
+    filterItems(hashValue.toLowerCase());
   };
 
   // Sensitive search. Only start searching if there's been no input for 300 ms
   let timeoutId;
-  document.getElementById("bibsearch").addEventListener("input", function () {
+  input.addEventListener("input", function () {
     clearTimeout(timeoutId); // Clear the previous timeout
     const searchTerm = this.value.toLowerCase();
     timeoutId = setTimeout(filterItems(searchTerm), 300);

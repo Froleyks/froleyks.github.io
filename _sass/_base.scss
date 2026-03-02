@@ -1143,6 +1143,16 @@ nav[data-toggle="toc"] {
   display: none !important;
 }
 
+.publications [id] {
+  scroll-margin-top: 6rem;
+}
+
+.bibsearch-target {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 6px;
+  border-radius: 6px;
+}
+
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
   z-index: 999;
