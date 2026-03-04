@@ -1,8 +1,12 @@
 (() => {
-  const STORAGE_KEY = "papers-search:v1";
+  const STORAGE_KEY = "papers-search:v2";
   const SECTION = "Papers";
 
   const normalizeText = (text) => (text || "").replace(/\s+/g, " ").trim();
+  const normalizePath = (path) => {
+    const pathname = (path || "").toString().split(/[?#]/)[0];
+    return pathname.replace(/\/+$/, "") || "/";
+  };
 
   const getBasePath = () => {
     const brandHref = document.querySelector("a.navbar-brand")?.getAttribute("href");
@@ -11,6 +15,7 @@
   };
 
   const getPublicationsPath = () => `${getBasePath()}publications/`;
+  const isOnPublicationsPage = () => normalizePath(window.location.pathname) === normalizePath(getPublicationsPath());
 
   const buildItems = (entries) => {
     const publicationsPath = getPublicationsPath();
@@ -71,12 +76,13 @@
           return;
         }
 
-        const hasPublicationsInDom = document.querySelector(".publications ol.bibliography .title") != null;
-        if (hasPublicationsInDom) {
+        if (isOnPublicationsPage()) {
           const entries = extractEntriesFromDocument(document);
-          sessionStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
-          addItemsToNinja(buildItems(entries));
-          return;
+          if (entries.length > 0) {
+            sessionStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+            addItemsToNinja(buildItems(entries));
+            return;
+          }
         }
 
         const publicationsPath = getPublicationsPath();
@@ -106,4 +112,3 @@
     }
   });
 })();
-
