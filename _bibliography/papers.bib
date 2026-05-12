@@ -1,3 +1,50 @@
+@inproceedings{FroleyksConstraints,
+  title = {Certifying Constraints in Hardware Model Checking},
+  booktitle = {Formal Methods - 27th International Symposium, {FM} 2026, Tokyo, Japan, May 18--22, 2026, Proceedings},
+  author = {Froleyks, Nils and Yu, Emily and Biere, Armin and Heljanko, Keijo},
+  year = {2026},
+  series = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  address = {Tokyo, Japan},
+  abstract = {Model checking is a powerful automated reasoning technique for verifying hardware designs, ensuring that they function correctly before deployment. However, modern model checkers are complex software systems with hundreds of thousands of lines of code, making them prone to errors. To increase confidence in verification results, recent efforts in hardware verification focus on requiring model checkers to produce machine-checkable proofs according to a standardized format that can be independently validated. Yet, implementing proof generation across different verification algorithms presents a unique challenge. In hardware model checking, constraints play an essential role, as they encode assumptions about the environment and help simplify analysis. This paper addresses the challenge by developing a certification approach that ensures verification results remain trustworthy when constraints are present. We introduce certificate generation methods for three classes of constraints that can be extracted from the models. Furthermore, to support a broader range of constraints and more complex reset logic for industrial use, we also provide alternative Quantified Boolean Formula checks in the proof format with a single quantifier alternation.  Lastly, we present a certificate generation method for k-induction with uniqueness constraints, an important model checking technique. We implement these in a certification toolkit, and provide empirical evaluation on competition benchmarks, demonstrating their effectiveness.},
+  pdf = {Froleyks et al. - 2025 - Certifying constraints in hardware model checking.pdf}
+}
+
+@inproceedings{FroleyksLiveness,
+  title = {Liveness Proofs for Hardware Model Checking},
+  booktitle = {Computer Aided Verification - 38th International Conference, {CAV} 2026, Lisbon, Portugal, July 26--29, 2026, Proceedings, Part {I}},
+  author = {Froleyks, Nils and Yu, Emily and Bogaerts, Bart and Biere, Armin and Heljanko, Keijo},
+  editor = {Lin, Anthony W. and Darulova, Eva and R{\"u}mmer, Philipp},
+  year = {2026},
+  series = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  abstract = {We introduce a generic certificate format for verifying liveness properties in hardware model checking. The format relies purely on propositional predicates and does not involve explicit counters. Our certificates can be efficiently validated using a fixed number of SAT checks. The proposed format is compatible with state-of-the-art liveness checking algorithms. We present certificate generation for several representative techniques, including rLive, liveness-to-safety reduction, and $k$-liveness, as well as for a preprocessing method based on stabilizing constraint extraction. Experimental results on benchmarks from the Hardware Model Checking Competition demonstrate that our approach is practically effective with very low certification overhead, and our certificate checker successfully validated all generated certificates.},
+  pdf = {Froleyks et al. - 2026 - Liveness Proofs for Hardware Model Checking.pdf}
+}
+
+@inproceedings{FroleyksCertifaiger,
+  title = {Hardware Model Checking Certification with Certifaiger and Cerbtora},
+  booktitle = {Proceedings of the International Joint Conference on Automated Reasoning ({IJCAR}) 2026, Part of {FLoC} 2026, Lisbon, Portugal, July 26--29, 2026},
+  author = {Froleyks, Nils and Yu, Emily},
+  year = {2026},
+  series = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  address = {Lisbon, Portugal},
+  abstract = {Certificates are machine-checkable witnesses that help increase confidence in verification results by providing independently verifiable evidence beyond a simple yes/no answer. In this short paper, we present two certificate checkers for hardware model checking, Certifaiger and Cerbtora, which target bit-level and word-level verification of hardware designs, respectively. Certifaiger has been adopted in recent editions of the Hardware Model Checking Competition, but not described in the literature before. Cerbtora extends the same theoretical framework to the word level, in which certificates are expressed in the same modeling language as the design under test and are validated using efficient automated reasoning engines. We describe the architecture and main components of both tools and evaluate them on competition benchmarks.},
+  pdf = {Froleyks et al. - 2026 - Hardware Model Checking Certification with Certifaiger and Cerbtora.pdf}
+}
+
+@inproceedings{PollittFFFB26-CaDiCaL30,
+  author    = {Florian Pollitt and Mathias Fleury and Katalin Fazekas and Nils Froleyks and Armin Biere},
+  title     = {{CaDiCaL 3.0}: Proofs, Algorithms, Implied Literals, and Robust Scheduling},
+  booktitle = {29th International Conference on Theory and Applications of Satisfiability Testing (SAT 2026)},
+  series    = {Leibniz International Proceedings in Informatics (LIPIcs)},
+  publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik},
+  year      = {2026},
+  address   = {Dagstuhl, Germany},
+  note      = {To appear}
+}
+
 @phdthesis{froleyks2025deep,
   title={Deep Integration of SAT Solving and Model Checking},
   author={Froleyks, Nils},
