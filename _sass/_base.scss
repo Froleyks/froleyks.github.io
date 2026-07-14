@@ -813,6 +813,37 @@ footer.sticky-bottom {
             border-color: var(--global-theme-color);
           }
         }
+
+        a.btn.instant-tooltip {
+          position: relative;
+
+          &::before {
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 0.25rem;
+            bottom: calc(100% + 0.4rem);
+            color: $white-color;
+            content: attr(data-tooltip);
+            font-size: 0.75rem;
+            left: 50%;
+            line-height: 1.2;
+            opacity: 0;
+            padding: 0.3rem 0.5rem;
+            pointer-events: none;
+            position: absolute;
+            transform: translateX(-50%);
+            transition: none;
+            visibility: hidden;
+            white-space: nowrap;
+            z-index: 1080;
+          }
+
+          &:focus-visible::before,
+          &:hover::before {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
         a.award.btn {
           border-color: var(--global-highlight-color);
         }
