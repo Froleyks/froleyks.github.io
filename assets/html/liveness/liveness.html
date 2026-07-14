@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Manim Slides</title>
+<link href="liveness_assets/reveal.css" rel="stylesheet"/>
+<link href="liveness_assets/black.css" rel="stylesheet"/>
+<!-- Theme used for syntax highlighting of code -->
+<!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+<link href="liveness_assets/zenburn.css" rel="stylesheet"/>
+<!-- <link rel="stylesheet" href="index.css"> -->
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/e210417fbd7e98bae9fa40bbc5426877907e3be5e770417366d72599ac36eddf.mp4" data-background-video-poster="liveness_assets/e210417fbd7e98bae9fa40bbc5426877907e3be5e770417366d72599ac36eddf.webp" data-background-video-muted="">
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/a669607dbaafe5ec871dd1d6c8d0fcdd330e2ffc683e07a433fe05d363e177e8.mp4" data-background-video-poster="liveness_assets/a669607dbaafe5ec871dd1d6c8d0fcdd330e2ffc683e07a433fe05d363e177e8.webp">
+<aside class="notes" data-markdown="">Title. The talk is about machine-checkable liveness proofs.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/cb0bdd09db5a1365fbcfaf2c5bd26581450a7474e2bf048fdd34bb2198d06f06.mp4" data-background-video-poster="liveness_assets/cb0bdd09db5a1365fbcfaf2c5bd26581450a7474e2bf048fdd34bb2198d06f06.webp">
+<aside class="notes" data-markdown="">Four latches start at zero, selecting the initial graph state.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/7f20009500277a3ef4fed9788de1df243b6fc4d361239855793ec02d9e555b85.mp4" data-background-video-poster="liveness_assets/7f20009500277a3ef4fed9788de1df243b6fc4d361239855793ec02d9e555b85.webp">
+<aside class="notes" data-markdown="">The selected inputs pick an outgoing edge of the current state.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/082a0ef6a3875263cb9c1675114be33df77d81f6543e26f94ed6f93060fc93ee.mp4" data-background-video-poster="liveness_assets/082a0ef6a3875263cb9c1675114be33df77d81f6543e26f94ed6f93060fc93ee.webp">
+<aside class="notes" data-markdown="">The latch values update and the highlighted current state moves at the same time.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/91f816b9c16e5e92e8037511a8f4a3fe46720603ef3511fcfd8918858b21222a.mp4" data-background-video-poster="liveness_assets/91f816b9c16e5e92e8037511a8f4a3fe46720603ef3511fcfd8918858b21222a.webp">
+<aside class="notes" data-markdown="">After four input choices, the reached state violates P, so the highlighted path is a bad trace.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/c46a4f12ebe7293dd0c7843716fdd9697f23221474a575de33c1d39c785b8fcf.mp4" data-background-video-poster="liveness_assets/c46a4f12ebe7293dd0c7843716fdd9697f23221474a575de33c1d39c785b8fcf.webp">
+<aside class="notes" data-markdown="">The second state-space view comes out of the first as a clean copy.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/5ae8d59d151cf649d0b287c152c5aed334bd1d9582cc491fda1913cc3720462b.mp4" data-background-video-poster="liveness_assets/5ae8d59d151cf649d0b287c152c5aed334bd1d9582cc491fda1913cc3720462b.webp">
+<aside class="notes" data-markdown="">A liveness counterexample is another trace that ends in a cycle with a violating transition.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/9b1d0563fd7349adc3eac92d6f923e613257c03b8ea563a193ec8bce99f8a3a5.mp4" data-background-video-poster="liveness_assets/9b1d0563fd7349adc3eac92d6f923e613257c03b8ea563a193ec8bce99f8a3a5.webp">
+<aside class="notes" data-markdown="">A complex model checker returns traces for unsafe answers or a witness circuit for safe answers.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/e25871d6f71143aeb54f6423c16bc3735a1448649052d9820b5d28404f35c22d.mp4" data-background-video-poster="liveness_assets/e25871d6f71143aeb54f6423c16bc3735a1448649052d9820b5d28404f35c22d.webp">
+<aside class="notes" data-markdown="">The independent checker validates the model and witness circuit.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/6aaa162f68d868b19f091298d84b9e5ccba5be4baffd8783cfdb54f0720dade6.mp4" data-background-video-poster="liveness_assets/6aaa162f68d868b19f091298d84b9e5ccba5be4baffd8783cfdb54f0720dade6.webp">
+<aside class="notes" data-markdown="">These are the certification papers behind the safety column.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/529e66e1e7601d0f7bf2216d7be44fd80487ee45098d5467e9bed17c781d5358.mp4" data-background-video-poster="liveness_assets/529e66e1e7601d0f7bf2216d7be44fd80487ee45098d5467e9bed17c781d5358.webp">
+<aside class="notes" data-markdown="">Liveness has several successful algorithms and transformations.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/179d0623a0ebd795bfa525a4b8926cd69ce2c8e5c1fa5c2ae6e4c415ffcd15a4.mp4" data-background-video-poster="liveness_assets/179d0623a0ebd795bfa525a4b8926cd69ce2c8e5c1fa5c2ae6e4c415ffcd15a4.webp">
+<aside class="notes" data-markdown="">The contribution is one proof format that spans safety and liveness.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/cfdc78f3b01706082978755611e449b881b911cabcecd02e97ac3c0e66352142.mp4" data-background-video-poster="liveness_assets/cfdc78f3b01706082978755611e449b881b911cabcecd02e97ac3c0e66352142.webp">
+<aside class="notes" data-markdown="">W has the same behavior as M</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/6d980d2175e64e5cfd96ddb25f92c6588274e211f10e49c2db52c55015fb933d.mp4" data-background-video-poster="liveness_assets/6d980d2175e64e5cfd96ddb25f92c6588274e211f10e49c2db52c55015fb933d.webp">
+<aside class="notes" data-markdown="">W is obviously safe and obviously live.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/1b8f1b9c138b5caef8944832d2be489679229f34fe7b54a9bb7864441fe389c3.mp4" data-background-video-poster="liveness_assets/1b8f1b9c138b5caef8944832d2be489679229f34fe7b54a9bb7864441fe389c3.webp">
+<aside class="notes" data-markdown="">The eight SAT obligations appear together within their three checking blocks.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/cf67a9388497617c35682ea5dcadbde98f20b7b60a416bc1b95765f4fe82dc21.mp4" data-background-video-poster="liveness_assets/cf67a9388497617c35682ea5dcadbde98f20b7b60a416bc1b95765f4fe82dc21.webp">
+<aside class="notes" data-markdown="">The certificate checker emits a fixed set of formulas, and those formulas go to the SAT solver.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/0ae1910d76391065c0ad9def5a274c90324792c062ac27e7d964fec530fa1dde.mp4" data-background-video-poster="liveness_assets/0ae1910d76391065c0ad9def5a274c90324792c062ac27e7d964fec530fa1dde.webp">
+<aside class="notes" data-markdown="">Simulation obligations beside a concrete model trace.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/c3b15f1b68d1ca3be25124912f62d5e75fde3b27677b67a3edba19aa3c3ee91f.mp4" data-background-video-poster="liveness_assets/c3b15f1b68d1ca3be25124912f62d5e75fde3b27677b67a3edba19aa3c3ee91f.webp">
+<aside class="notes" data-markdown="">Reset constructs the first witness state.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/7234562500a37ffbe52006787bce2e271a9edb311f079a025128b438ad58aa6d.mp4" data-background-video-poster="liveness_assets/7234562500a37ffbe52006787bce2e271a9edb311f079a025128b438ad58aa6d.webp">
+<aside class="notes" data-markdown="">Transition extends the witness trace in lockstep.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/2f71996eb306094a741c569e322538cfa413e621c8c8561d67205a3039419c71.mp4" data-background-video-poster="liveness_assets/2f71996eb306094a741c569e322538cfa413e621c8c8561d67205a3039419c71.webp">
+<aside class="notes" data-markdown="">Assume every witness state is safe.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/ffce5830ade399ca1646a4c7e3953658b138fc8a17c0c8f461571711936cbdaa.mp4" data-background-video-poster="liveness_assets/ffce5830ade399ca1646a4c7e3953658b138fc8a17c0c8f461571711936cbdaa.webp">
+<aside class="notes" data-markdown="">Safety transfers that marking back to the model.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/1d59b5bee785ce442a944e883ca60fb5a241ba6bbcc861673a5aaff08f77c866.mp4" data-background-video-poster="liveness_assets/1d59b5bee785ce442a944e883ca60fb5a241ba6bbcc861673a5aaff08f77c866.webp">
+<aside class="notes" data-markdown="">Assume the witness proves progress on the suffix.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/35dd4d6ab4179f8658c8cce9c78084f65a4882dd0785587ce2ac900383e41bd5.mp4" data-background-video-poster="liveness_assets/35dd4d6ab4179f8658c8cce9c78084f65a4882dd0785587ce2ac900383e41bd5.webp">
+<aside class="notes" data-markdown="">Liveness transfers those marked progress transitions to the model.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/298375a7c91421213e39bef3b2df2c5d1cb7542ccb38e5a6ac83d93732400dfd.mp4" data-background-video-poster="liveness_assets/298375a7c91421213e39bef3b2df2c5d1cb7542ccb38e5a6ac83d93732400dfd.webp">
+<aside class="notes" data-markdown="">Base proves the reset witness state safe.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/d793e3a4f910c30aef7b0d826968b248e0d49fa2f210de5132bf6f1ba80478d5.mp4" data-background-video-poster="liveness_assets/d793e3a4f910c30aef7b0d826968b248e0d49fa2f210de5132bf6f1ba80478d5.webp">
+<aside class="notes" data-markdown="">Induction propagates safety along the witness trace.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/4c1aac3d125b552130bfd275c429a96f4b61d7503d5f9d337c4e1f7ab2cc8b67.mp4" data-background-video-poster="liveness_assets/4c1aac3d125b552130bfd275c429a96f4b61d7503d5f9d337c4e1f7ab2cc8b67.webp">
+<aside class="notes" data-markdown="">Assume the same violating edge appears twice in the trace.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/061742f82d2e1f27b77fbb8fe45b8b9bb93d3de1906e4ecb26b635f64e2abcd6.mp4" data-background-video-poster="liveness_assets/061742f82d2e1f27b77fbb8fe45b8b9bb93d3de1906e4ecb26b635f64e2abcd6.webp">
+<aside class="notes" data-markdown="">Decrease gives the first backward Q edge.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/d77ad909d0583a803aa22e666895f3670edc81d107ce29348d8200ac54ec395d.mp4" data-background-video-poster="liveness_assets/d77ad909d0583a803aa22e666895f3670edc81d107ce29348d8200ac54ec395d.webp">
+<aside class="notes" data-markdown="">Closure carries the backward Q edge to the repeated state.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/9eefde17146d89cfd3b2510354a396db4a939f69b85f9a7e11f742a1607a27b7.mp4" data-background-video-poster="liveness_assets/9eefde17146d89cfd3b2510354a396db4a939f69b85f9a7e11f742a1607a27b7.webp">
+<aside class="notes" data-markdown="">repeated edges are live</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/19c7ece4dc5311c39956872f04f2787b3b5acb028a6c41ea780725620ac23613.mp4" data-background-video-poster="liveness_assets/19c7ece4dc5311c39956872f04f2787b3b5acb028a6c41ea780725620ac23613.webp">
+<aside class="notes" data-markdown="">The safety algorithms are already established; now introduce the four liveness approaches.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/61555b2dc3f1a4a3235acea50454dcb5239a6ce1a3c132e19e5a782317ffd564.mp4" data-background-video-poster="liveness_assets/61555b2dc3f1a4a3235acea50454dcb5239a6ce1a3c132e19e5a782317ffd564.webp">
+<aside class="notes" data-markdown="">The running example has two transitions that violate Q.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/95e824d5182726b7b2530f8b8068b5f24395f0294569a140f11d7ee9e4064e48.mp4" data-background-video-poster="liveness_assets/95e824d5182726b7b2530f8b8068b5f24395f0294569a140f11d7ee9e4064e48.webp">
+<aside class="notes" data-markdown="">Each violating edge marks its source state.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/d369e85dffeaef8c0c9a940a8b6684ed9afe2baa8bb69924676aa74e6739c2ea.mp4" data-background-video-poster="liveness_assets/d369e85dffeaef8c0c9a940a8b6684ed9afe2baa8bb69924676aa74e6739c2ea.webp">
+<aside class="notes" data-markdown="">At k=0, both marked states are still bad.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/0d1b72ec1887dbaab045fbee2a724d94c4af44e1662a19fac6ae2e3796287541.mp4" data-background-video-poster="liveness_assets/0d1b72ec1887dbaab045fbee2a724d94c4af44e1662a19fac6ae2e3796287541.webp">
+<aside class="notes" data-markdown="">Increasing k once makes the first state safe.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/18fbec6674238def3a895e46147aa8482e62a976836ed18f92f1f9296ec7cd31.mp4" data-background-video-poster="liveness_assets/18fbec6674238def3a895e46147aa8482e62a976836ed18f92f1f9296ec7cd31.webp">
+<aside class="notes" data-markdown="">The final counter values match the current k-Liveness witness.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/59eb1e2c861bc19f6e7ebf7bc90270ebdc320c104014fecb039ba1564bb29953.mp4" data-background-video-poster="liveness_assets/59eb1e2c861bc19f6e7ebf7bc90270ebdc320c104014fecb039ba1564bb29953.webp">
+<aside class="notes" data-markdown="">The witness turns the bound into monotone Q' edges.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/aac3c5a0cd4e14eefe064d2c11bed9415d689e10301f77a7fd019cb6ed202d15.mp4" data-background-video-poster="liveness_assets/aac3c5a0cd4e14eefe064d2c11bed9415d689e10301f77a7fd019cb6ed202d15.webp">
+<aside class="notes" data-markdown="">k-Liveness: model checking runtime.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/2a53cf8be328c87e34e6af5c3afbfe2e67911e7e57a93c77e74782244b487e1c.mp4" data-background-video-poster="liveness_assets/2a53cf8be328c87e34e6af5c3afbfe2e67911e7e57a93c77e74782244b487e1c.webp">
+<aside class="notes" data-markdown="">k-Liveness: model checking plus certificate checking.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/355c4cee03774b77b5c794f256db6a3939fe71ad80ed57f9ef37e8f6153a8352.mp4" data-background-video-poster="liveness_assets/355c4cee03774b77b5c794f256db6a3939fe71ad80ed57f9ef37e8f6153a8352.webp">
+<aside class="notes" data-markdown="">The counter states and their binary latch values line up.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/1bedff61f5dfa91aa2f2cdc6d9c97ba5375c3ba6e4ce934e5d1ca8c6d7566ad6.mp4" data-background-video-poster="liveness_assets/1bedff61f5dfa91aa2f2cdc6d9c97ba5375c3ba6e4ce934e5d1ca8c6d7566ad6.webp">
+<aside class="notes" data-markdown="">First query the most significant bit.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/4f6698986b1c08e7353652b855b681aa5530dc2671d1a1e229919e899d5c1d78.mp4" data-background-video-poster="liveness_assets/4f6698986b1c08e7353652b855b681aa5530dc2671d1a1e229919e899d5c1d78.webp">
+<aside class="notes" data-markdown="">Start with the compact b0 implication check.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/e68a214a413a8b95f18b78d009260ca5f3a530d168c0254842cabc02ef30cfff.mp4" data-background-video-poster="liveness_assets/e68a214a413a8b95f18b78d009260ca5f3a530d168c0254842cabc02ef30cfff.webp">
+<aside class="notes" data-markdown="">Only after the check is complete do we dim the b1-changing edge.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/d8178066145ac1ef78c5ee25627e59cf3ba81e69e957724654be0646b085d072.mp4" data-background-video-poster="liveness_assets/d8178066145ac1ef78c5ee25627e59cf3ba81e69e957724654be0646b085d072.webp">
+<aside class="notes" data-markdown="">Mark an arbitrary finite prefix of the infinite trace.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/b2b6571534fa40175d62e049324d2e1fbc94f7bddcb264cea6337ff480ff9049.mp4" data-background-video-poster="liveness_assets/b2b6571534fa40175d62e049324d2e1fbc94f7bddcb264cea6337ff480ff9049.webp">
+<aside class="notes" data-markdown="">Shift the infinite suffix left; its continuing tail makes it look unchanged.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/679cb1f9243e8b731951dc5e1dd1c2795e70235f808215562b673ee13d1f3b68.mp4" data-background-video-poster="liveness_assets/679cb1f9243e8b731951dc5e1dd1c2795e70235f808215562b673ee13d1f3b68.webp">
+<aside class="notes" data-markdown="">The same filtering step dims the b0-changing edges.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/83a1e29588bb802232f74d7e4fb25430739f72439b448b301b690b6b1c1c4ea5.mp4" data-background-video-poster="liveness_assets/83a1e29588bb802232f74d7e4fb25430739f72439b448b301b690b6b1c1c4ea5.webp">
+<aside class="notes" data-markdown="">Construct the witness relation: every binary state points to every lower state and to itself.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/bdaa370f8d12a8790c97d972bcfcbe1b32acd04de720b99c7a8df6ecdf5c4a3b.mp4" data-background-video-poster="liveness_assets/bdaa370f8d12a8790c97d972bcfcbe1b32acd04de720b99c7a8df6ecdf5c4a3b.webp">
+<aside class="notes" data-markdown="">The paper's comparator definition uses dec for a lower stabilizer value and eq for equally stable states.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/8b6e9cb3a2d10ca02c72e5d312be74a49d8f3df5657ebda27e0436caf152ec2c.mp4" data-background-video-poster="liveness_assets/8b6e9cb3a2d10ca02c72e5d312be74a49d8f3df5657ebda27e0436caf152ec2c.webp">
+<aside class="notes" data-markdown="">k-Liveness+stabilizing: model checking plus certificate checking.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/b5979ae4d4828dd1ad8ef1526fbfe09351783c0f29b4e3b598d9015d8a6db35b.mp4" data-background-video-poster="liveness_assets/b5979ae4d4828dd1ad8ef1526fbfe09351783c0f29b4e3b598d9015d8a6db35b.webp">
+<aside class="notes" data-markdown="">Start from the same four-state running example as k-Liveness.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/6225a3dc45d1d062aa5e78e4bcbe9d49f8615f16db4c74fd4525a4b71aaf66ec.mp4" data-background-video-poster="liveness_assets/6225a3dc45d1d062aa5e78e4bcbe9d49f8615f16db4c74fd4525a4b71aaf66ec.webp">
+<aside class="notes" data-markdown="">The additional edge from the last state to the first closes a cycle that is not live.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/827c30807ad0cf751b627426e2cbc72168b6379c91b836c4171eff7b121a574e.mp4" data-background-video-poster="liveness_assets/827c30807ad0cf751b627426e2cbc72168b6379c91b836c4171eff7b121a574e.webp">
+<aside class="notes" data-markdown="">The run first crosses the violating edge from state 0 to state 1.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/3668aa2c76ce84d27e9c7f7bfbafce66883b20f31cec4d214d302ae065afdd82.mp4" data-background-video-poster="liveness_assets/3668aa2c76ce84d27e9c7f7bfbafce66883b20f31cec4d214d302ae065afdd82.webp">
+<aside class="notes" data-markdown="">State 1 is stored and the copy latches hold it fixed.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/8f4e5539968cb7191a19fc182e67fe0823b4557a631be2b8342f2b7c05f12997.mp4" data-background-video-poster="liveness_assets/8f4e5539968cb7191a19fc182e67fe0823b4557a631be2b8342f2b7c05f12997.webp">
+<aside class="notes" data-markdown="">The added edge returns the run to state 0 while state 1 stays stored.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/698718950a162d65c0a5a4d6cda382f8d9653b266845c007c265cbe58852b476.mp4" data-background-video-poster="liveness_assets/698718950a162d65c0a5a4d6cda382f8d9653b266845c007c265cbe58852b476.webp">
+<aside class="notes" data-markdown="">At state 0, the bad edge leads back to stored state 1, exposing the not-live cycle as a safety violation.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/2b1a7ca62a67a927c802804b12181275c78e1e4cc1486e893c72e726ce2ef682.mp4" data-background-video-poster="liveness_assets/2b1a7ca62a67a927c802804b12181275c78e1e4cc1486e893c72e726ce2ef682.webp">
+<aside class="notes" data-markdown="">The running example places (0,1) under state 0 and the three pairs ending in state 3 under state 3.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/b5ee8d14edeb55a76231193967777df9f13c0d2557c7650f6e4c830207bcc91b.mp4" data-background-video-poster="liveness_assets/b5ee8d14edeb55a76231193967777df9f13c0d2557c7650f6e4c830207bcc91b.webp">
+<aside class="notes" data-markdown="">Those listed pairs are exactly the red forbidden transitions.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/efbf1336ee008d5ac286b5cc93097a428631ac0be6bfcdb63e357f442d00f849.mp4" data-background-video-poster="liveness_assets/efbf1336ee008d5ac286b5cc93097a428631ac0be6bfcdb63e357f442d00f849.webp">
+<aside class="notes" data-markdown="">All remaining state pairs are green, so the L2S witness proves Q on them.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/9fa1809dc1fdb074379d2056113bac4e0b03456c37ca2ef118ae688ed21c078e.mp4" data-background-video-poster="liveness_assets/9fa1809dc1fdb074379d2056113bac4e0b03456c37ca2ef118ae688ed21c078e.webp">
+<aside class="notes" data-markdown="">L2S: model checking plus certificate checking.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/7c9708ff752ba68b16e0e4b0215cbbeb65194c4adbc80b31011c36d46063d859.mp4" data-background-video-poster="liveness_assets/7c9708ff752ba68b16e0e4b0215cbbeb65194c4adbc80b31011c36d46063d859.webp">
+<aside class="notes" data-markdown="">Start rLive from the same four-state running example.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/30f0155d5cfae4b01c04633d21dd368717f75e2328fb73bcd0086a0c03fee851.mp4" data-background-video-poster="liveness_assets/30f0155d5cfae4b01c04633d21dd368717f75e2328fb73bcd0086a0c03fee851.webp">
+<aside class="notes" data-markdown="">Create an enlarged search node around state 0 and its outgoing edge.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/ff8f910455f8b7decfa16e0378ad13abefef9009fc5092c0ee7455cea32da6fb.mp4" data-background-video-poster="liveness_assets/ff8f910455f8b7decfa16e0378ad13abefef9009fc5092c0ee7455cea32da6fb.webp">
+<aside class="notes" data-markdown="">The squiggly connector represents a path to the enlarged state-2 transition.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/4420feca8bd54a65f605750ae9cac8522ed7cb7210e9728bb5495a96fa083ed0.mp4" data-background-video-poster="liveness_assets/4420feca8bd54a65f605750ae9cac8522ed7cb7210e9728bb5495a96fa083ed0.webp">
+<aside class="notes" data-markdown="">The search from state 2 ends in failure.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/bf1cc3676417840216ea136db572abcaf458e096dc1da9cf74a1f5412cea5252.mp4" data-background-video-poster="liveness_assets/bf1cc3676417840216ea136db572abcaf458e096dc1da9cf74a1f5412cea5252.webp">
+<aside class="notes" data-markdown="">The first closed region contains state 3.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/3b32d3cda9723d382de8cd53948f9bbc6a240f2b31eea78b21d3b95ba68c87d4.mp4" data-background-video-poster="liveness_assets/3b32d3cda9723d382de8cd53948f9bbc6a240f2b31eea78b21d3b95ba68c87d4.webp">
+<aside class="notes" data-markdown="">Backtrack from the enlarged state-2 transition to state 0.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/6e71f00935ebd3ea3f3f874800d60cd688b0cc977836d63dfa1c8e10890cc998.mp4" data-background-video-poster="liveness_assets/6e71f00935ebd3ea3f3f874800d60cd688b0cc977836d63dfa1c8e10890cc998.webp">
+<aside class="notes" data-markdown="">A different search direction from state 0 also fails.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/718a294bf71ce02bcafa95d507e2c6e7a10e5dcd1ec763558541d1457f1bc6a7.mp4" data-background-video-poster="liveness_assets/718a294bf71ce02bcafa95d507e2c6e7a10e5dcd1ec763558541d1457f1bc6a7.webp">
+<aside class="notes" data-markdown="">The next region contains the enlarged state-2 transition and state 1.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/9c3f4fe194fd40b6e5abd5f80c81399ce90b1800ca6318b27c0864779ffad9fe.mp4" data-background-video-poster="liveness_assets/9c3f4fe194fd40b6e5abd5f80c81399ce90b1800ca6318b27c0864779ffad9fe.webp">
+<aside class="notes" data-markdown="">A third search from the enlarged state-0 transition ends in failure.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/4ae9143539861c42d092c9a5c8ea545b7e588951544cebe1c09c54cdbf834823.mp4" data-background-video-poster="liveness_assets/4ae9143539861c42d092c9a5c8ea545b7e588951544cebe1c09c54cdbf834823.webp">
+<aside class="notes" data-markdown="">The third highlighted region contains states 0 and 2, but no other states.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/021473a572fc7c11ae63897131293efd39fc11bea0f162b75b9a9693b725a6bd.mp4" data-background-video-poster="liveness_assets/021473a572fc7c11ae63897131293efd39fc11bea0f162b75b9a9693b725a6bd.webp">
+<aside class="notes" data-markdown="">Keep only the lowest invariant number for each state.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/827e5317c65b95b7ef90c95290a02bc64afa5d87b0adb4940e583f0017d38db5.mp4" data-background-video-poster="liveness_assets/827e5317c65b95b7ef90c95290a02bc64afa5d87b0adb4940e583f0017d38db5.webp">
+<aside class="notes" data-markdown="">Draw a green witness edge exactly when the invariant number can increase or stay equal.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/8c11dab354aecfb0371f5711dbe231001db56770db35053037bfdcf6465d958e.mp4" data-background-video-poster="liveness_assets/8c11dab354aecfb0371f5711dbe231001db56770db35053037bfdcf6465d958e.webp">
+<aside class="notes" data-markdown="">rLive: model checking plus certificate checking.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/d0f536eeee0e51fac45de72db2b49b19500950a7ee7cf229ee2ae71d7a7fe688.mp4" data-background-video-poster="liveness_assets/d0f536eeee0e51fac45de72db2b49b19500950a7ee7cf229ee2ae71d7a7fe688.webp">
+<aside class="notes" data-markdown="">rLive-others: model checking runtime.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/db232359fc1c98f880c4c568195ef4a4e8fdd328ddb26f2b0a11a1d4647d2bf3.mp4" data-background-video-poster="liveness_assets/db232359fc1c98f880c4c568195ef4a4e8fdd328ddb26f2b0a11a1d4647d2bf3.webp">
+<aside class="notes" data-markdown="">rLive-others: model checking plus certificate checking.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/160befa9c03d0bd144718ff89ac70518dc4ff94f9d31091ab60b65b383bad5b8.mp4" data-background-video-poster="liveness_assets/160befa9c03d0bd144718ff89ac70518dc4ff94f9d31091ab60b65b383bad5b8.webp">
+<aside class="notes" data-markdown="">rLive points staged on the y-axis.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/16f22dbe1a5a79276e06caa8ae15aeeb1d57726f33a283dc3a1211066fc32367.mp4" data-background-video-poster="liveness_assets/16f22dbe1a5a79276e06caa8ae15aeeb1d57726f33a283dc3a1211066fc32367.webp">
+<aside class="notes" data-markdown="">rLive points move to their related-work checking times.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/7d745d07e17239158d012f3e937531777560b36af504d603b6142e180a2830ea.mp4" data-background-video-poster="liveness_assets/7d745d07e17239158d012f3e937531777560b36af504d603b6142e180a2830ea.webp">
+<aside class="notes" data-markdown="">rLive speedup diagonal.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/e1e34b3dae0dc56dcfb9c8ce3f742508d81291810ea96f06faf015e4a05c3786.mp4" data-background-video-poster="liveness_assets/e1e34b3dae0dc56dcfb9c8ce3f742508d81291810ea96f06faf015e4a05c3786.webp">
+<aside class="notes" data-markdown="">k-Liveness comparison.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/cb47f47f1fd6487b768a9e293725868f73fbfe639ba9a30d3d40cd65f91f2148.mp4" data-background-video-poster="liveness_assets/cb47f47f1fd6487b768a9e293725868f73fbfe639ba9a30d3d40cd65f91f2148.webp">
+<aside class="notes" data-markdown="">stabilizing+k-Liveness comparison.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/92a1c0400d77bb4ff3486b3af1b2a90a364d1422a6a3c03f4e6f2eec58a85539.mp4" data-background-video-poster="liveness_assets/92a1c0400d77bb4ff3486b3af1b2a90a364d1422a6a3c03f4e6f2eec58a85539.webp">
+<aside class="notes" data-markdown="">The eight obligations establish safety and liveness with low overhead. The paper and code are at froleyks.de.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/987b058f8547353b27bbf15b96ae7cba6c1b3d35f293c1c3b28fe7786435c4ad.mp4" data-background-video-poster="liveness_assets/987b058f8547353b27bbf15b96ae7cba6c1b3d35f293c1c3b28fe7786435c4ad.webp">
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/71ffdb5aeb2212628b01492741d7fd0e2b4001fbc5db75c26fc79f9008d49782.mp4" data-background-video-poster="liveness_assets/71ffdb5aeb2212628b01492741d7fd0e2b4001fbc5db75c26fc79f9008d49782.webp">
+<aside class="notes" data-markdown="">References used in the talk.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/847ce0848eea3d5fe40db6e2ca8b013f045a3a53a17c4f91362fd733a07abc97.mp4" data-background-video-poster="liveness_assets/847ce0848eea3d5fe40db6e2ca8b013f045a3a53a17c4f91362fd733a07abc97.webp">
+<aside class="notes" data-markdown="">The current certificate checker assumes one liveness signal.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/01b53c14322a5a5732ed6f397578f31f10b1d475a56b315ef1a43b7e270b4921.mp4" data-background-video-poster="liveness_assets/01b53c14322a5a5732ed6f397578f31f10b1d475a56b315ef1a43b7e270b4921.webp">
+<aside class="notes" data-markdown="">Future work extends the format to a set of liveness signals, where one signal must eventually remain true.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/2d01a8d84826ffc3383ee3b3778cc3c827ebf01e477f03181241b5b4abd0866e.mp4" data-background-video-poster="liveness_assets/2d01a8d84826ffc3383ee3b3778cc3c827ebf01e477f03181241b5b4abd0866e.webp">
+<aside class="notes" data-markdown="">Simulation now preserves every liveness signal separately.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="liveness_assets/881fd2631af52d22171d48cf52bff93a9e940a06a3a31aabe825eebccbb788ae.mp4" data-background-video-poster="liveness_assets/881fd2631af52d22171d48cf52bff93a9e940a06a3a31aabe825eebccbb788ae.webp">
+<aside class="notes" data-markdown="">Decrease and closure use the disjunction of all signals.</aside>
+</section>
+</div>
+</div>
+<script src="liveness_assets/reveal.js"></script>
+<script src="liveness_assets/notes.js"></script>
+<!-- To include plugins, see: https://revealjs.com/plugins/ -->
+<script src="liveness_assets/markdown.js"></script>
+<!-- <script src="index.js"></script> -->
+<script>
+      // manim-slides-poster-preload
+      // Reveal creates background videos lazily. Give each video a small,
+      // already-rendered frame to display while the MP4 is loading/decoding.
+      const manimSlidePosters = new Map(
+        Array.from(
+          document.querySelectorAll(
+            "[data-background-video][data-background-video-poster]"
+          ),
+          (slide) => [
+            slide.getAttribute("data-background-video"),
+            slide.getAttribute("data-background-video-poster"),
+          ]
+        )
+      );
+
+      function prepareManimSlideVideo(video) {
+        if (video.dataset.manimSlidePrepared !== undefined) return;
+
+        const source = video.querySelector("source[src]");
+        const poster = source && manimSlidePosters.get(source.getAttribute("src"));
+        if (!poster) return;
+
+        video.dataset.manimSlidePrepared = "";
+        video.preload = "auto";
+        video.poster = poster;
+      }
+
+      function prepareAddedManimSlideVideos(node) {
+        if (node.nodeType !== Node.ELEMENT_NODE) return;
+        if (node.matches("video")) prepareManimSlideVideo(node);
+        node.querySelectorAll("video").forEach(prepareManimSlideVideo);
+      }
+
+      const manimSlideVideoObserver = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          mutation.addedNodes.forEach(prepareAddedManimSlideVideos);
+        }
+      });
+      manimSlideVideoObserver.observe(document.querySelector(".reveal"), {
+        childList: true,
+        subtree: true,
+      });
+
+      Reveal.initialize({
+        /// The list of RevealJS plugins.
+        plugins: [ RevealMarkdown, RevealNotes ],
+        // The "normal" size of the presentation, aspect ratio will
+        // be preserved when the presentation is scaled to fit different
+        // resolutions. Can be specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around
+        // the content
+        margin: 0.04,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 2.0,
+        // Display presentation control arrows
+        controls: false,
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+        // Display a presentation progress bar
+        progress: false,
+        // Display the page number of the current slide
+        // - true:    Show slide number
+        // - false:   Hide slide number
+        //
+        // Can optionally be set as a string that specifies the number formatting:
+        // - "h.v":   Horizontal . vertical slide number (default)
+        // - "h/v":   Horizontal / vertical slide number
+        // - "c":   Flattened slide number
+        // - "c/t":   Flattened slide number / total slides
+        //
+        // Alternatively, you can provide a function that returns the slide
+        // number for the current slide. The function should take in a slide
+        // object and return an array with one string [slideNumber] or
+        // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+        slideNumber: false,
+        // Can be used to limit the contexts in which the slide number appears
+        // - "all":      Always show the slide number
+        // - "print":    Only when printing to PDF
+        // - "speaker":  Only in the speaker view
+        showSlideNumber: 'all',
+        // Use 1 based indexing for # links to match slide number (default is zero
+        // based)
+        hashOneBasedIndex: false,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: false,
+        // Enable support for jump-to-slide navigation shortcuts
+        jumpToSlide: true,
+        // Push each slide change to the browser history.  Implies `hash: true`
+        history: false,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Optional function that blocks keyboard events when retuning false
+        //
+        // If you set this to 'focused', we will only capture keyboard events
+        // for embedded decks when they are in focus
+        keyboardCondition: null,
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Changes the behavior of our navigation directions.
+        //
+        // "default"
+        // Left/right arrow keys step between horizontal slides, up/down
+        // arrow keys step between vertical slides. Space key steps through
+        // all slides (both horizontal and vertical).
+        //
+        // "linear"
+        // Removes the up/down arrows. Left/right arrows step through all
+        // slides (both horizontal and vertical).
+        //
+        // "grid"
+        // When this is enabled, stepping left/right from a vertical stack
+        // to an adjacent vertical stack will land you at the same vertical
+        // index.
+        //
+        // Consider a deck with six slides ordered in two vertical stacks:
+        // 1.1    2.1
+        // 1.2    2.2
+        // 1.3    2.3
+        //
+        // If you're on slide 1.3 and navigate right, you will normally move
+        // from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
+        // from 1.3 -> 2.3.
+        navigationMode: 'default',
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the question-mark
+        // key is pressed
+        help: true,
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+        // Global override for autolaying embedded media (video/audio/iframe)
+        // - null:   Media will only autoplay if data-autoplay is present
+        // - true:   All media will autoplay, regardless of individual setting
+        // - false:  No media will autoplay, regardless of individual setting
+        autoPlayMedia: null,
+        // Global override for preloading lazy-loaded iframes
+        // - null:   Iframes with data-src AND data-preload will be loaded when within
+        //           the viewDistance, iframes with only data-src will be loaded when visible
+        // - true:   All iframes with data-src will be loaded when within the viewDistance
+        // - false:  All iframes with data-src will be loaded only when visible
+        preloadIframes: null,
+        // Can be used to globally disable auto-animation
+        autoAnimate: true,
+        // Optionally provide a custom element matcher that will be
+        // used to dictate which elements we can animate between.
+        autoAnimateMatcher: null,
+        // Default settings for our auto-animate transitions, can be
+        // overridden per-slide or per-element via data arguments
+        autoAnimateEasing: 'ease',
+        autoAnimateDuration: 1.0,
+        autoAnimateUnmatched: true,
+        // CSS properties that can be auto-animated. Position & scale
+        // is matched separately so there's no need to include styles
+        // like top/right/bottom/left, width/height or margin.
+        autoAnimateStyles: ['opacity', 'color', 'background-color', 'padding', 'font-size', 'line-height', 'letter-spacing', 'border-width', 'border-color', 'border-radius', 'outline', 'outline-offset'],
+        // Controls automatic progression to the next slide
+        // - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
+        //           is present on the current slide or fragment
+        // - 1+:     All slides will progress automatically at the given interval
+        // - false:  No auto-sliding, even if data-autoslide is present
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Use this method for navigation when auto-sliding (defaults to navigateNext)
+        autoSlideMethod: null,
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+        // Opens links in an iframe preview overlay
+        // Add `data-preview-link` and `data-preview-link="false"` to customize each link
+        // individually
+        previewLinks: false,
+        // Exposes the reveal.js API through window.postMessage
+        postMessage: true,
+        // Dispatches all reveal.js events to the parent window through postMessage
+        postMessageEvents: false,
+        // Focuses body when page changes visibility to ensure keyboard shortcuts work
+        focusBodyOnPageVisibilityChange: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+        // The maximum number of pages a single slide can expand onto when printing
+        // to PDF, unlimited by default
+        pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+        // Prints each fragment on a separate slide
+        pdfSeparateFragments: true,
+        // Offset used to reduce the height of content within exported PDF pages.
+        // This exists to account for environment differences based on how you
+        // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+        // on precisely the total height of the document whereas in-browser
+        // printing has to end one pixel before.
+        pdfPageHeightOffset: -1,
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+        // The display mode that will be used to show slides
+        display: 'block',
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000
+      });
+      // Override SPACE to play / pause the video
+      Reveal.addKeyBinding(
+        {
+          keyCode: 32,
+          key: 'SPACE',
+          description: 'Play / pause video'
+        },
+        () => {
+          var currentVideos = Reveal.getCurrentSlide().slideBackgroundContentElement.getElementsByTagName("video");
+          if (currentVideos.length > 0) {
+            if (currentVideos[0].paused == true) currentVideos[0].play();
+            else currentVideos[0].pause();
+          } else {
+            Reveal.next();
+          }
+        }
+      );
+    </script>
+</body>
+</html>
