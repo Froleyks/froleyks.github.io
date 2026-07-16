@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Manim Slides</title>
+<link href="cerbtora_assets/reveal.css" rel="stylesheet"/>
+<link href="cerbtora_assets/black.css" rel="stylesheet"/>
+<!-- Theme used for syntax highlighting of code -->
+<!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+<link href="cerbtora_assets/zenburn.css" rel="stylesheet"/>
+<!-- <link rel="stylesheet" href="index.css"> -->
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/fd345f4d3efc2cc322f462428740d08530c0a8d6279f847f8a12b15833e24b0b.mp4" data-background-video-poster="cerbtora_assets/fd345f4d3efc2cc322f462428740d08530c0a8d6279f847f8a12b15833e24b0b.webp" data-background-video-muted="">
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/e05b863f2207aec4d340198d999392cf68a91d7c7a098a4659b6ee24db50913c.mp4" data-background-video-poster="cerbtora_assets/e05b863f2207aec4d340198d999392cf68a91d7c7a098a4659b6ee24db50913c.webp">
+<aside class="notes" data-markdown="">Title slide: hardware model checking certification at two abstraction levels.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/215a35d4340e22236274d916548d7cade17702974cb9b3bbb93f7394870b284a.mp4" data-background-video-poster="cerbtora_assets/215a35d4340e22236274d916548d7cade17702974cb9b3bbb93f7394870b284a.webp">
+<aside class="notes" data-markdown="">Four latches start at zero, selecting the initial graph state.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/e94b789256cdb39b15bdd5dd0e00beab608ac605762294d9100c356f1b11c12a.mp4" data-background-video-poster="cerbtora_assets/e94b789256cdb39b15bdd5dd0e00beab608ac605762294d9100c356f1b11c12a.webp">
+<aside class="notes" data-markdown="">The selected inputs pick an outgoing edge of the current state.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/a47fee7b1041e3875fb533d35375b2304b7ff76113500887bee057149a547da0.mp4" data-background-video-poster="cerbtora_assets/a47fee7b1041e3875fb533d35375b2304b7ff76113500887bee057149a547da0.webp">
+<aside class="notes" data-markdown="">The latch values update and the highlighted current state moves at the same time.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/8348c7b98774335ba7f44105c39337bd4067060a8c4c62fa07b4fe3e72895c90.mp4" data-background-video-poster="cerbtora_assets/8348c7b98774335ba7f44105c39337bd4067060a8c4c62fa07b4fe3e72895c90.webp">
+<aside class="notes" data-markdown="">After five input choices, the reached state violates P, so the highlighted path is a bad trace.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/7d650a06c979e5d8d8f1d2a7cf9132391c0c87eca10f183b37623cc33e2a64e6.mp4" data-background-video-poster="cerbtora_assets/7d650a06c979e5d8d8f1d2a7cf9132391c0c87eca10f183b37623cc33e2a64e6.webp">
+<aside class="notes" data-markdown="">At word level, the variables are bitvectors and the circuit operations include addition and multiplication.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/9601bfcaba55f9725b64b0c165a2e031d9abd9ee9df7f1d0e8c2c31f44849c80.mp4" data-background-video-poster="cerbtora_assets/9601bfcaba55f9725b64b0c165a2e031d9abd9ee9df7f1d0e8c2c31f44849c80.webp">
+<aside class="notes" data-markdown="">A model checker returns a counterexample for unsafe answers or a witness circuit for safe answers.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/e2fd4e51512b4f3eaa0ae4ac09fc9b34a45b3913433a288a21baef6abd0d7a81.mp4" data-background-video-poster="cerbtora_assets/e2fd4e51512b4f3eaa0ae4ac09fc9b34a45b3913433a288a21baef6abd0d7a81.webp">
+<aside class="notes" data-markdown="">Certifaiger and Cerbtora independently validate the model and witness circuit at the bit and word levels.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/460d3daa89379760b170b015d449e33ffcba240d28fd49fafa31e8824f161375.mp4" data-background-video-poster="cerbtora_assets/460d3daa89379760b170b015d449e33ffcba240d28fd49fafa31e8824f161375.webp">
+<aside class="notes" data-markdown="">The witness simulates the model and carries an inductive safety property.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/31fd3f5dc48016b618a3309624145331823003527cbedd7ac87e822084528ae5.mp4" data-background-video-poster="cerbtora_assets/31fd3f5dc48016b618a3309624145331823003527cbedd7ac87e822084528ae5.webp">
+<aside class="notes" data-markdown="">Reset, Transition, and Property establish the simulation relation.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/0760fdb89d4a9eaddb28c5638655bfb8444ebb5b8da84c9e8154ad3f78184cd2.mp4" data-background-video-poster="cerbtora_assets/0760fdb89d4a9eaddb28c5638655bfb8444ebb5b8da84c9e8154ad3f78184cd2.webp">
+<aside class="notes" data-markdown="">Base and Step make the witness property inductive; together, these are the five conditions.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/d975d1548a0c073ea2151a9c2fbbea30cc91f83c060530b1b2efc70d5faa12d5.mp4" data-background-video-poster="cerbtora_assets/d975d1548a0c073ea2151a9c2fbbea30cc91f83c060530b1b2efc70d5faa12d5.webp">
+<aside class="notes" data-markdown="">The model has eight states, with reset at 000 and the bad state marked at 111.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/462ae998be4d94a34e345edf9dceb777dc8b039d610078ae0fd8cc9df8ccea8d.mp4" data-background-video-poster="cerbtora_assets/462ae998be4d94a34e345edf9dceb777dc8b039d610078ae0fd8cc9df8ccea8d.webp">
+<aside class="notes" data-markdown="">The complete eight-state model and the derived four-state witness now remain visible side by side.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/6973376f2f76674c6fb015174d6fbac253316bb4a7086c7f6902c980c46d5049.mp4" data-background-video-poster="cerbtora_assets/6973376f2f76674c6fb015174d6fbac253316bb4a7086c7f6902c980c46d5049.webp">
+<aside class="notes" data-markdown="">The bit-level and word-level witnesses appear beside their models; no model information is removed.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/2a645e129a9bb468c9d55a8b59f99e4160079802ceb6669031a9a8b2f1b560b2.mp4" data-background-video-poster="cerbtora_assets/2a645e129a9bb468c9d55a8b59f99e4160079802ceb6669031a9a8b2f1b560b2.webp">
+<aside class="notes" data-markdown="">Certifaiger checks the bit-level pair; Cerbtora checks the word-level pair.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/f4e71e28b1971e808ca8e86ae9656e22caf1708e0221704d930f10ac6d922341.mp4" data-background-video-poster="cerbtora_assets/f4e71e28b1971e808ca8e86ae9656e22caf1708e0221704d930f10ac6d922341.webp">
+<aside class="notes" data-markdown="">The check command dispatches bad traces and witness circuits to their matching verification tools.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/4e895c16c6f5f754739f841f7c3509ba199bc97dba9dcd12e8ae0f454cdd5004.mp4" data-background-video-poster="cerbtora_assets/4e895c16c6f5f754739f841f7c3509ba199bc97dba9dcd12e8ae0f454cdd5004.webp">
+<aside class="notes" data-markdown="">Unlike the bit-level SAT path, the Bitwuzla path still lacks a proof-checking endpoint.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/5b56788c74279910da7c0ece99fbadf8b2649c3a0fc7ea075326ef3cf9224451.mp4" data-background-video-poster="cerbtora_assets/5b56788c74279910da7c0ece99fbadf8b2649c3a0fc7ea075326ef3cf9224451.webp">
+<aside class="notes" data-markdown="">The certified wrapper calls check and the model checker; fuzz adds the bit-level or word-level input generator above them.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/a748cfc62d9d8e7e4aeca679c878e3f5869d5794b16b5b8825e7b30d51f525b1.mp4" data-background-video-poster="cerbtora_assets/a748cfc62d9d8e7e4aeca679c878e3f5869d5794b16b5b8825e7b30d51f525b1.webp">
+<aside class="notes" data-markdown="">Bit blasting translates both the word-level model and its certificate before Certifaiger checks their bit-level equivalents.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/6322a8b3748cf94b2360e27653c8487c8a3d8165dc26ed448cfb6d65a201ee3f.mp4" data-background-video-poster="cerbtora_assets/6322a8b3748cf94b2360e27653c8487c8a3d8165dc26ed448cfb6d65a201ee3f.webp">
+<aside class="notes" data-markdown="">A bug in either translation becomes part of the trusted path, even when the final bit-level check succeeds.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/9cb7d6257640453d4e1c646c23c75a5bf5867e5c0fb883f67b41a998eef87243.mp4" data-background-video-poster="cerbtora_assets/9cb7d6257640453d4e1c646c23c75a5bf5867e5c0fb883f67b41a998eef87243.webp">
+<aside class="notes" data-markdown="">These real fixes illustrate the extra implementation risk introduced by bitvector translation.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/6dacd7d60c1080e42c7d4f55896fc96eeefdaf186b40d4cef9aef3311b8a6716.mp4" data-background-video-poster="cerbtora_assets/6dacd7d60c1080e42c7d4f55896fc96eeefdaf186b40d4cef9aef3311b8a6716.webp">
+<aside class="notes" data-markdown="">Formula generation is negligible, SAT features are essential, and LRAT proof checking raises CaDiCaL's PAR10 by a factor of 1.69.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/866e2dfb770dcc9771d15308da39f789e7d43988c3f5270bba9f32bf99a0abdb.mp4" data-background-video-poster="cerbtora_assets/866e2dfb770dcc9771d15308da39f789e7d43988c3f5270bba9f32bf99a0abdb.webp">
+<aside class="notes" data-markdown="">Across all 47 certificates, word-level checking uses 23 percent less time in total.</aside>
+</section>
+<section data-background-color="#f7f8fa" data-background-size="contain" data-background-video="cerbtora_assets/d0b744124e54827a97e2e80421e16c20408421e4c1539219cd8abf9aeee4b08d.mp4" data-background-video-poster="cerbtora_assets/d0b744124e54827a97e2e80421e16c20408421e4c1539219cd8abf9aeee4b08d.webp">
+<aside class="notes" data-markdown="">Word-level witnesses are five times smaller in geometric mean, and smaller on 42 of 47 cases.</aside>
+</section>
+</div>
+</div>
+<script src="cerbtora_assets/reveal.js"></script>
+<script src="cerbtora_assets/notes.js"></script>
+<!-- To include plugins, see: https://revealjs.com/plugins/ -->
+<script src="cerbtora_assets/markdown.js"></script>
+<!-- <script src="index.js"></script> -->
+<script>
+      // manim-slides-poster-preload
+      // Reveal creates background videos lazily. Give each video a small,
+      // already-rendered frame to display while the MP4 is loading/decoding.
+      const manimSlidePosters = new Map(
+        Array.from(
+          document.querySelectorAll(
+            "[data-background-video][data-background-video-poster]"
+          ),
+          (slide) => [
+            slide.getAttribute("data-background-video"),
+            slide.getAttribute("data-background-video-poster"),
+          ]
+        )
+      );
+
+      function prepareManimSlideVideo(video) {
+        if (video.dataset.manimSlidePrepared !== undefined) return;
+
+        const source = video.querySelector("source[src]");
+        const poster = source && manimSlidePosters.get(source.getAttribute("src"));
+        if (!poster) return;
+
+        video.dataset.manimSlidePrepared = "";
+        video.preload = "auto";
+        video.poster = poster;
+      }
+
+      function prepareAddedManimSlideVideos(node) {
+        if (node.nodeType !== Node.ELEMENT_NODE) return;
+        if (node.matches("video")) prepareManimSlideVideo(node);
+        node.querySelectorAll("video").forEach(prepareManimSlideVideo);
+      }
+
+      const manimSlideVideoObserver = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          mutation.addedNodes.forEach(prepareAddedManimSlideVideos);
+        }
+      });
+      manimSlideVideoObserver.observe(document.querySelector(".reveal"), {
+        childList: true,
+        subtree: true,
+      });
+
+      Reveal.initialize({
+        /// The list of RevealJS plugins.
+        plugins: [ RevealMarkdown, RevealNotes ],
+        // The "normal" size of the presentation, aspect ratio will
+        // be preserved when the presentation is scaled to fit different
+        // resolutions. Can be specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around
+        // the content
+        margin: 0.04,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 2.0,
+        // Display presentation control arrows
+        controls: false,
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+        // Display a presentation progress bar
+        progress: false,
+        // Display the page number of the current slide
+        // - true:    Show slide number
+        // - false:   Hide slide number
+        //
+        // Can optionally be set as a string that specifies the number formatting:
+        // - "h.v":   Horizontal . vertical slide number (default)
+        // - "h/v":   Horizontal / vertical slide number
+        // - "c":   Flattened slide number
+        // - "c/t":   Flattened slide number / total slides
+        //
+        // Alternatively, you can provide a function that returns the slide
+        // number for the current slide. The function should take in a slide
+        // object and return an array with one string [slideNumber] or
+        // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+        slideNumber: false,
+        // Can be used to limit the contexts in which the slide number appears
+        // - "all":      Always show the slide number
+        // - "print":    Only when printing to PDF
+        // - "speaker":  Only in the speaker view
+        showSlideNumber: 'all',
+        // Use 1 based indexing for # links to match slide number (default is zero
+        // based)
+        hashOneBasedIndex: false,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: false,
+        // Enable support for jump-to-slide navigation shortcuts
+        jumpToSlide: true,
+        // Push each slide change to the browser history.  Implies `hash: true`
+        history: false,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Optional function that blocks keyboard events when retuning false
+        //
+        // If you set this to 'focused', we will only capture keyboard events
+        // for embedded decks when they are in focus
+        keyboardCondition: null,
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Changes the behavior of our navigation directions.
+        //
+        // "default"
+        // Left/right arrow keys step between horizontal slides, up/down
+        // arrow keys step between vertical slides. Space key steps through
+        // all slides (both horizontal and vertical).
+        //
+        // "linear"
+        // Removes the up/down arrows. Left/right arrows step through all
+        // slides (both horizontal and vertical).
+        //
+        // "grid"
+        // When this is enabled, stepping left/right from a vertical stack
+        // to an adjacent vertical stack will land you at the same vertical
+        // index.
+        //
+        // Consider a deck with six slides ordered in two vertical stacks:
+        // 1.1    2.1
+        // 1.2    2.2
+        // 1.3    2.3
+        //
+        // If you're on slide 1.3 and navigate right, you will normally move
+        // from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
+        // from 1.3 -> 2.3.
+        navigationMode: 'default',
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the question-mark
+        // key is pressed
+        help: true,
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+        // Global override for autolaying embedded media (video/audio/iframe)
+        // - null:   Media will only autoplay if data-autoplay is present
+        // - true:   All media will autoplay, regardless of individual setting
+        // - false:  No media will autoplay, regardless of individual setting
+        autoPlayMedia: null,
+        // Global override for preloading lazy-loaded iframes
+        // - null:   Iframes with data-src AND data-preload will be loaded when within
+        //           the viewDistance, iframes with only data-src will be loaded when visible
+        // - true:   All iframes with data-src will be loaded when within the viewDistance
+        // - false:  All iframes with data-src will be loaded only when visible
+        preloadIframes: null,
+        // Can be used to globally disable auto-animation
+        autoAnimate: true,
+        // Optionally provide a custom element matcher that will be
+        // used to dictate which elements we can animate between.
+        autoAnimateMatcher: null,
+        // Default settings for our auto-animate transitions, can be
+        // overridden per-slide or per-element via data arguments
+        autoAnimateEasing: 'ease',
+        autoAnimateDuration: 1.0,
+        autoAnimateUnmatched: true,
+        // CSS properties that can be auto-animated. Position & scale
+        // is matched separately so there's no need to include styles
+        // like top/right/bottom/left, width/height or margin.
+        autoAnimateStyles: ['opacity', 'color', 'background-color', 'padding', 'font-size', 'line-height', 'letter-spacing', 'border-width', 'border-color', 'border-radius', 'outline', 'outline-offset'],
+        // Controls automatic progression to the next slide
+        // - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
+        //           is present on the current slide or fragment
+        // - 1+:     All slides will progress automatically at the given interval
+        // - false:  No auto-sliding, even if data-autoslide is present
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Use this method for navigation when auto-sliding (defaults to navigateNext)
+        autoSlideMethod: null,
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+        // Opens links in an iframe preview overlay
+        // Add `data-preview-link` and `data-preview-link="false"` to customize each link
+        // individually
+        previewLinks: false,
+        // Exposes the reveal.js API through window.postMessage
+        postMessage: true,
+        // Dispatches all reveal.js events to the parent window through postMessage
+        postMessageEvents: false,
+        // Focuses body when page changes visibility to ensure keyboard shortcuts work
+        focusBodyOnPageVisibilityChange: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+        // The maximum number of pages a single slide can expand onto when printing
+        // to PDF, unlimited by default
+        pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+        // Prints each fragment on a separate slide
+        pdfSeparateFragments: true,
+        // Offset used to reduce the height of content within exported PDF pages.
+        // This exists to account for environment differences based on how you
+        // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+        // on precisely the total height of the document whereas in-browser
+        // printing has to end one pixel before.
+        pdfPageHeightOffset: -1,
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+        // The display mode that will be used to show slides
+        display: 'block',
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000
+      });
+      // Override SPACE to play / pause the video
+      Reveal.addKeyBinding(
+        {
+          keyCode: 32,
+          key: 'SPACE',
+          description: 'Play / pause video'
+        },
+        () => {
+          var currentVideos = Reveal.getCurrentSlide().slideBackgroundContentElement.getElementsByTagName("video");
+          if (currentVideos.length > 0) {
+            if (currentVideos[0].paused == true) currentVideos[0].play();
+            else currentVideos[0].pause();
+          } else {
+            Reveal.next();
+          }
+        }
+      );
+    </script>
+</body>
+</html>
