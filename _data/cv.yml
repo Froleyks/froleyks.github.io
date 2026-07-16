@@ -3,8 +3,8 @@
   contents:
     - name: Full Name
       value: Nils Froleyks
-    - name: Date of Birth
-      value: 16th March 1995
+    - name: Year of Birth
+      value: 1995
     - name: Institution
       value: KU Leuven, Belgium
     - name: Email
@@ -50,11 +50,15 @@
   contents:
     - year: 2022
       items:
-        - Paternity Leave (Feb – Nov)
+        - Parental Leave (Feb – Nov)
 
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2026
+      items:
+        - CAV Distinguished Paper Award
+        - Top-Three Finalist, Heinz Zemanek Award – Austrian Computer Society (OCG)
     - year: 2025
       items:
         - CAV Distinguished Paper Award
@@ -88,6 +92,11 @@
 - title: Teaching & Supervision
   type: time_table
   contents:
+    - year: 2026
+      items:
+        - Guest Lecturer in Formal Methods for AI (Winter), Leiden University
+        - Guest Lecturer in SAT Solving (Summer), KU Leuven
+        - Supervised Bachelor’s Thesis – Certifying Constraints from Hardware Designs, Leiden University
     - year: 2024
       items:
         - Lecturer in Model Checking (Winter), JKU Linz
