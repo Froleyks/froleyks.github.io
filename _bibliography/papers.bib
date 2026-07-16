@@ -7,20 +7,32 @@
   series = {Lecture Notes in Computer Science},
   publisher = {Springer},
   abstract = {We introduce a generic certificate format for verifying liveness properties in hardware model checking. The format relies purely on propositional predicates and does not involve explicit counters. Our certificates can be efficiently validated using a fixed number of SAT checks. The proposed format is compatible with state-of-the-art liveness checking algorithms. We present certificate generation for several representative techniques, including rLive, liveness-to-safety reduction, and $k$-liveness, as well as for a preprocessing method based on stabilizing constraint extraction. Experimental results on benchmarks from the Hardware Model Checking Competition demonstrate that our approach is practically effective with very low certification overhead, and our certificate checker successfully validated all generated certificates.},
+  award = {Received the CAV 2026 Distinguished Paper Award; 8 of 319 total submissions received this distinction.},
+  award_name = {Distinguished Paper},
   pdf = {Froleyks et al. - 2026 - Liveness Proofs for Hardware Model Checking.pdf},
   talk = {liveness/liveness.html},
   selected={true}
 }
 
 @inproceedings{PollittFFFB26-CaDiCaL30,
-  author    = {Florian Pollitt and Mathias Fleury and Katalin Fazekas and Nils Froleyks and Andr{\'e} Schidler and Dominik Schreiber and Armin Biere},
-  title     = {{CaDiCaL 3.0}: Proofs, Algorithms, Implied Literals, and Robust Scheduling},
-  booktitle = {29th International Conference on Theory and Applications of Satisfiability Testing (SAT 2026)},
+  author    = {Pollitt, Florian and Fleury, Mathias and Fazekas, Katalin and Froleyks, Nils and Schidler, Andr{\'e} and Schreiber, Dominik and Biere, Armin},
+  title     = {{CaDiCaL 3.0}},
+  booktitle = {29th International Conference on Theory and Applications of Satisfiability Testing ({SAT} 2026), Lisbon, Portugal, July 20--23, 2026},
+  pages     = {40:1--40:14},
   series    = {Leibniz International Proceedings in Informatics (LIPIcs)},
-  publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik},
+  isbn      = {978-3-95977-431-4},
+  issn      = {1868-8969},
   year      = {2026},
+  volume    = {377},
+  editor    = {Ignatiev, Alexey and Szeider, Stefan},
+  publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik},
   address   = {Dagstuhl, Germany},
-  note      = {To appear}
+  url       = {https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2026.40},
+  urn       = {urn:nbn:de:0030-drops-263465},
+  doi       = {10.4230/LIPIcs.SAT.2026.40},
+  abstract  = {The propositional satisfiability (SAT) solver Kissat supports a relatively narrow feature set in favor of bare-metal performance and targeted improvements to core solving techniques, which helped it dominate the International SAT Competition since 2024. However, many applications rely on advanced SAT solver features such as incremental interaction schemes, finding direct consequences of assumed literals, or expressive proof logging that allows for real-time checking. This system description reports on how we successfully adapted Kissat's award-winning techniques to the full-featured incremental SAT solver CaDiCaL, including clausal congruence closure, clausal equivalence sweeping, and bounded variable addition. The main challenge was to support efficient linear proof production with hints. We further extended CaDiCaL's API to extract implied literals under assumptions and applied advanced deterministic scheduling of inprocessing based on the ticks metric for approximating cache line accesses. Experiments confirm the benefits of these efforts.},
+  keywords  = {Incremental SAT, CaDiCaL, SAT Solver},
+  pdf       = {https://drops.dagstuhl.de/storage/00lipics/lipics-vol377-sat2026/LIPIcs.SAT.2026.40/LIPIcs.SAT.2026.40.pdf}
 }
 
 @inproceedings{FroleyksCertifaiger,
@@ -72,6 +84,8 @@
   publisher = {Springer},
   doi = {10.1007/978-3-031-98668-0\_14},
   abstract = {Certification was made mandatory for the first time in the latest hardware model checking competition. In this case study, we investigate the trade-offs of requiring certificates for both passing and failing properties in the competition. Our evaluation shows that participating model checkers were able to produce compact, correct certificates that could be verified with minimal overhead. Furthermore, the certifying winner of the competition outperforms the previous non-certifying state-of-the-art model checker, demonstrating that certification can be adopted without compromising model checking efficiency.},
+  award = {Received the CAV 2025 Distinguished Paper Award; 6 of 305 total submissions received this distinction.},
+  award_name = {Distinguished Paper},
   bibsource = {dblp computer science bibliography, https://dblp.org},
   keywords = {froleyks},
   timestamp = {Tue, 05 Aug 2025 22:38:31 +0200},

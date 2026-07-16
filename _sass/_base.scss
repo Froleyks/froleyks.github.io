@@ -771,6 +771,22 @@ footer.sticky-bottom {
         font-weight: bolder;
       }
 
+      .title-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.25rem 0.75rem;
+
+        .title {
+          flex: 1 1 20rem;
+        }
+
+        a.award {
+          flex: 0 0 auto;
+          margin-left: auto;
+        }
+      }
+
       .author {
         a {
           border-bottom: 1px dashed var(--global-theme-color);
