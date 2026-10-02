@@ -1,0 +1,29 @@
+- id: sat
+  title: SAT Solving
+  category: Lectures
+  img: /assets/img/talks/sat.png
+  html: /assets/html/sat/sat.html
+  pdf: /assets/html/sat/sat.pdf
+
+- id: mc
+  title: Certifying Symbolic Model Checking
+  category: Lectures
+  img: /assets/img/talks/mc.png
+  html: /assets/html/mc/mc.html
+  pdf: /assets/html/mc/mc.pdf
+
+- id: liveness
+  title: Liveness Proofs for Hardware Model Checking
+  category: Conference Talks
+  venue: CAV 2026
+  img: /assets/img/talks/liveness.png
+  html: /assets/html/liveness/liveness.html
+  pdf: /assets/html/liveness/liveness.pdf
+
+- id: cerbtora
+  title: Hardware Model Checking Certification with Certifaiger and Cerbtora
+  category: Conference Talks
+  venue: IJCAR 2026
+  img: /assets/img/talks/cerbtora.png
+  html: /assets/html/cerbtora/cerbtora.html
+  pdf: /assets/html/cerbtora/cerbtora.pdf

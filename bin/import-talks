@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+# Update these paths when a talk gets a fresh standalone export.
+sources=(
+  /data/talk/sat-lecture__talk_mimi--20260921T100339/sat/sat.html
+  /data/talk/model-checking__lecture_talk_mimi--20260902T100037/mc/mc.html
+  /home/froleyks/liveness__cav_talk--20260508T125718/liveness/liveness.html
+  /home/froleyks/friend__ijcar_talk--20260713T135056/cerbtora/cerbtora.html
+)
+
+mode="${1:-import}"
+if [[ "$mode" != import && "$mode" != verify ]]; then
+  echo "Usage: $0 [import|verify]" >&2
+  exit 1
+fi
+
+# Check all inputs before replacing any published files.
+for source in "${sources[@]}"; do
+  test -r "$source"
+  test -r "${source%.html}.pdf"
+done
+
+for source in "${sources[@]}"; do
+  name="$(basename "$source" .html)"
+  destination="assets/html/$name/$name.html"
+  if [[ "$mode" == import ]]; then
+    mkdir -p "$(dirname "$destination")"
+    python3 bin/pack-talk.py "$source" "$destination"
+    cp "${source%.html}.pdf" "${destination%.html}.pdf"
+    chmod 644 "$destination" "${destination%.html}.pdf"
+  else
+    python3 bin/pack-talk.py --verify "$source" "$destination"
+    cmp "${source%.html}.pdf" "${destination%.html}.pdf"
+  fi
+done
+
+if [[ "$mode" == import ]]; then
+  # The replacement HTML embeds everything; remove the old Reveal.js exports.
+  rm -rf assets/html/liveness/liveness_assets assets/html/cerbtora/cerbtora_assets
+else
+  test ! -e assets/html/liveness/liveness_assets
+  test ! -e assets/html/cerbtora/cerbtora_assets
+  echo "All four standalone talks and PDF copies verified."
+fi

@@ -4,7 +4,7 @@ title: software
 permalink: /projects/
 description: 
 nav: true
-nav_order: 3
+nav_order: 4
 display_categories: [Model Checking, SAT]
 horizontal: false
 ---

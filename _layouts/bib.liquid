@@ -213,19 +213,15 @@
         {% if entry.talk contains '://' %}
           <a
             href="{{ entry.talk }}"
-            class="btn btn-sm z-depth-0 instant-tooltip"
+            class="btn btn-sm z-depth-0"
             role="button"
-            data-tooltip="Firefox works best"
-            aria-label="talk — Firefox works best"
             >talk</a
           >
         {% else %}
           <a
             href="{{ entry.talk | prepend: '/assets/html/' | relative_url }}"
-            class="btn btn-sm z-depth-0 instant-tooltip"
+            class="btn btn-sm z-depth-0"
             role="button"
-            data-tooltip="Firefox works best"
-            aria-label="talk — Firefox works best"
             >talk</a
           >
         {% endif %}

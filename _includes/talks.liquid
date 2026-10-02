@@ -1,0 +1,40 @@
+<div class="col">
+  <div class="card h-100 hoverable">
+    <a href="{{ talk.html | relative_url }}" aria-label="Open {{ talk.title | escape }}">
+      {%
+        include figure.liquid
+        loading="eager"
+        path=talk.img
+        sizes="(min-width: 768px) 450px, 95vw"
+        alt=talk.title
+        class="card-img-top"
+      %}
+    </a>
+    <div class="card-body d-flex flex-column">
+      <a href="{{ talk.html | relative_url }}">
+        <h3 class="card-title">{{ talk.title }}</h3>
+      </a>
+      {% if talk.venue %}
+        <p class="card-text">{{ talk.venue }}</p>
+      {% endif %}
+      <div class="links mt-auto">
+        <a
+          href="{{ talk.html | relative_url }}"
+          class="btn btn-sm z-depth-0 instant-tooltip"
+          download
+          aria-label="Download {{ talk.title | escape }} as HTML"
+          aria-describedby="{{ talk.id }}-html-tooltip"
+          >HTML<span class="talk-tooltip" id="{{ talk.id }}-html-tooltip" role="tooltip">interactive single file html</span></a
+        >
+        <a
+          href="{{ talk.pdf | relative_url }}"
+          class="btn btn-sm z-depth-0 instant-tooltip"
+          download
+          aria-label="Download {{ talk.title | escape }} as PDF"
+          aria-describedby="{{ talk.id }}-pdf-tooltip"
+          >PDF<span class="talk-tooltip" id="{{ talk.id }}-pdf-tooltip" role="tooltip">limited pdf export without animations</span></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
